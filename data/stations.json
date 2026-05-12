@@ -1,0 +1,2620 @@
+[
+  {
+    "id": "st-001",
+    "name": "Abbesses",
+    "lat": 48.884594,
+    "lon": 2.33795,
+    "lines": [
+      "12"
+    ]
+  },
+  {
+    "id": "st-002",
+    "name": "Alexandre Dumas",
+    "lat": 48.856228,
+    "lon": 2.394676,
+    "lines": [
+      "2"
+    ]
+  },
+  {
+    "id": "st-003",
+    "name": "Alma-Marceau",
+    "lat": 48.864767,
+    "lon": 2.300991,
+    "lines": [
+      "9"
+    ]
+  },
+  {
+    "id": "st-004",
+    "name": "Alésia",
+    "lat": 48.828188,
+    "lon": 2.327165,
+    "lines": [
+      "4"
+    ]
+  },
+  {
+    "id": "st-005",
+    "name": "Anatole France",
+    "lat": 48.892083,
+    "lon": 2.28501,
+    "lines": [
+      "3"
+    ]
+  },
+  {
+    "id": "st-006",
+    "name": "Anvers",
+    "lat": 48.882973,
+    "lon": 2.344667,
+    "lines": [
+      "2"
+    ]
+  },
+  {
+    "id": "st-007",
+    "name": "Argentine",
+    "lat": 48.875337,
+    "lon": 2.290128,
+    "lines": [
+      "1"
+    ]
+  },
+  {
+    "id": "st-008",
+    "name": "Arts et Métiers",
+    "lat": 48.865455,
+    "lon": 2.356733,
+    "lines": [
+      "3",
+      "11"
+    ]
+  },
+  {
+    "id": "st-009",
+    "name": "Assemblée Nationale",
+    "lat": 48.860787,
+    "lon": 2.320998,
+    "lines": [
+      "12"
+    ]
+  },
+  {
+    "id": "st-010",
+    "name": "Aubervilliers Pantin - Quatre Chemins",
+    "lat": 48.903784,
+    "lon": 2.392221,
+    "lines": [
+      "7"
+    ]
+  },
+  {
+    "id": "st-011",
+    "name": "Avenue Émile Zola",
+    "lat": 48.846997,
+    "lon": 2.295019,
+    "lines": [
+      "10"
+    ]
+  },
+  {
+    "id": "st-012",
+    "name": "Avron",
+    "lat": 48.851905,
+    "lon": 2.397997,
+    "lines": [
+      "2"
+    ]
+  },
+  {
+    "id": "st-013",
+    "name": "Balard",
+    "lat": 48.836295,
+    "lon": 2.27833,
+    "lines": [
+      "8"
+    ]
+  },
+  {
+    "id": "st-014",
+    "name": "Barbès-Rochechouart",
+    "lat": 48.883611,
+    "lon": 2.350144,
+    "lines": [
+      "2",
+      "4"
+    ]
+  },
+  {
+    "id": "st-015",
+    "name": "Bastille",
+    "lat": 48.852962,
+    "lon": 2.368975,
+    "lines": [
+      "1",
+      "5",
+      "8"
+    ]
+  },
+  {
+    "id": "st-016",
+    "name": "Bel-Air",
+    "lat": 48.841338,
+    "lon": 2.400919,
+    "lines": [
+      "6"
+    ]
+  },
+  {
+    "id": "st-017",
+    "name": "Belleville",
+    "lat": 48.872066,
+    "lon": 2.376662,
+    "lines": [
+      "2",
+      "11"
+    ]
+  },
+  {
+    "id": "st-018",
+    "name": "Bercy",
+    "lat": 48.840195,
+    "lon": 2.379733,
+    "lines": [
+      "6",
+      "14"
+    ]
+  },
+  {
+    "id": "st-019",
+    "name": "Bibliothèque François Mitterrand",
+    "lat": 48.82999,
+    "lon": 2.375748,
+    "lines": [
+      "14"
+    ]
+  },
+  {
+    "id": "st-020",
+    "name": "Billancourt",
+    "lat": 48.831738,
+    "lon": 2.237437,
+    "lines": [
+      "9"
+    ]
+  },
+  {
+    "id": "st-021",
+    "name": "Bir-Hakeim",
+    "lat": 48.853943,
+    "lon": 2.289335,
+    "lines": [
+      "6"
+    ]
+  },
+  {
+    "id": "st-022",
+    "name": "Blanche",
+    "lat": 48.883556,
+    "lon": 2.33338,
+    "lines": [
+      "2"
+    ]
+  },
+  {
+    "id": "st-023",
+    "name": "Bobigny-Pantin - Raymond Queneau",
+    "lat": 48.895455,
+    "lon": 2.425327,
+    "lines": [
+      "5"
+    ]
+  },
+  {
+    "id": "st-024",
+    "name": "Boissière",
+    "lat": 48.866983,
+    "lon": 2.290059,
+    "lines": [
+      "6"
+    ]
+  },
+  {
+    "id": "st-025",
+    "name": "Bolivar",
+    "lat": 48.880667,
+    "lon": 2.374496,
+    "lines": [
+      "7bis"
+    ]
+  },
+  {
+    "id": "st-026",
+    "name": "Bonne Nouvelle",
+    "lat": 48.87059,
+    "lon": 2.348491,
+    "lines": [
+      "8",
+      "9"
+    ]
+  },
+  {
+    "id": "st-027",
+    "name": "Botzaris",
+    "lat": 48.879493,
+    "lon": 2.388567,
+    "lines": [
+      "7bis"
+    ]
+  },
+  {
+    "id": "st-028",
+    "name": "Boucicaut",
+    "lat": 48.841094,
+    "lon": 2.287946,
+    "lines": [
+      "8"
+    ]
+  },
+  {
+    "id": "st-029",
+    "name": "Boulogne - Jean Jaurès",
+    "lat": 48.842005,
+    "lon": 2.238887,
+    "lines": [
+      "10"
+    ]
+  },
+  {
+    "id": "st-030",
+    "name": "Boulogne - Pont de Saint-Cloud",
+    "lat": 48.840745,
+    "lon": 2.228537,
+    "lines": [
+      "10"
+    ]
+  },
+  {
+    "id": "st-031",
+    "name": "Bourse",
+    "lat": 48.868654,
+    "lon": 2.341376,
+    "lines": [
+      "3"
+    ]
+  },
+  {
+    "id": "st-032",
+    "name": "Brochant",
+    "lat": 48.890587,
+    "lon": 2.320175,
+    "lines": [
+      "13"
+    ]
+  },
+  {
+    "id": "st-033",
+    "name": "Bréguet-Sabin",
+    "lat": 48.856141,
+    "lon": 2.370209,
+    "lines": [
+      "5"
+    ]
+  },
+  {
+    "id": "st-034",
+    "name": "Buttes-Chaumont",
+    "lat": 48.878514,
+    "lon": 2.381615,
+    "lines": [
+      "7bis"
+    ]
+  },
+  {
+    "id": "st-035",
+    "name": "Buzenval",
+    "lat": 48.851975,
+    "lon": 2.401927,
+    "lines": [
+      "9"
+    ]
+  },
+  {
+    "id": "st-036",
+    "name": "Bérault",
+    "lat": 48.845471,
+    "lon": 2.429205,
+    "lines": [
+      "1"
+    ]
+  },
+  {
+    "id": "st-037",
+    "name": "Cadet",
+    "lat": 48.876009,
+    "lon": 2.344572,
+    "lines": [
+      "7"
+    ]
+  },
+  {
+    "id": "st-038",
+    "name": "Cambronne",
+    "lat": 48.847507,
+    "lon": 2.302968,
+    "lines": [
+      "6"
+    ]
+  },
+  {
+    "id": "st-039",
+    "name": "Campo Formio",
+    "lat": 48.835153,
+    "lon": 2.358566,
+    "lines": [
+      "5"
+    ]
+  },
+  {
+    "id": "st-040",
+    "name": "Cardinal Lemoine",
+    "lat": 48.846657,
+    "lon": 2.351623,
+    "lines": [
+      "10"
+    ]
+  },
+  {
+    "id": "st-041",
+    "name": "Censier-Daubenton",
+    "lat": 48.840234,
+    "lon": 2.351606,
+    "lines": [
+      "7"
+    ]
+  },
+  {
+    "id": "st-042",
+    "name": "Champs-Élysées – Clemenceau",
+    "lat": 48.867754,
+    "lon": 2.31372,
+    "lines": [
+      "1",
+      "13"
+    ]
+  },
+  {
+    "id": "st-043",
+    "name": "Chardon Lagache",
+    "lat": 48.845205,
+    "lon": 2.266442,
+    "lines": [
+      "10"
+    ]
+  },
+  {
+    "id": "st-044",
+    "name": "Charenton-Écoles",
+    "lat": 48.821898,
+    "lon": 2.413133,
+    "lines": [
+      "8"
+    ]
+  },
+  {
+    "id": "st-045",
+    "name": "Charles De Gaulle-Étoile",
+    "lat": 48.874903,
+    "lon": 2.295755,
+    "lines": [
+      "1",
+      "2",
+      "6"
+    ]
+  },
+  {
+    "id": "st-046",
+    "name": "Charles Michels",
+    "lat": 48.846535,
+    "lon": 2.285999,
+    "lines": [
+      "10"
+    ]
+  },
+  {
+    "id": "st-047",
+    "name": "Charonne",
+    "lat": 48.855094,
+    "lon": 2.3847,
+    "lines": [
+      "9"
+    ]
+  },
+  {
+    "id": "st-048",
+    "name": "Chaussée d'Antin - La Fayette",
+    "lat": 48.873029,
+    "lon": 2.334201,
+    "lines": [
+      "7",
+      "9"
+    ]
+  },
+  {
+    "id": "st-049",
+    "name": "Chemin Vert",
+    "lat": 48.857103,
+    "lon": 2.368184,
+    "lines": [
+      "8"
+    ]
+  },
+  {
+    "id": "st-050",
+    "name": "Chevaleret",
+    "lat": 48.834948,
+    "lon": 2.368126,
+    "lines": [
+      "6"
+    ]
+  },
+  {
+    "id": "st-051",
+    "name": "Château Rouge",
+    "lat": 48.886711,
+    "lon": 2.349559,
+    "lines": [
+      "4"
+    ]
+  },
+  {
+    "id": "st-052",
+    "name": "Château d'Eau",
+    "lat": 48.872621,
+    "lon": 2.356154,
+    "lines": [
+      "4"
+    ]
+  },
+  {
+    "id": "st-053",
+    "name": "Château de Vincennes",
+    "lat": 48.844456,
+    "lon": 2.44044,
+    "lines": [
+      "1"
+    ]
+  },
+  {
+    "id": "st-054",
+    "name": "Château-Landon",
+    "lat": 48.878444,
+    "lon": 2.361965,
+    "lines": [
+      "7"
+    ]
+  },
+  {
+    "id": "st-055",
+    "name": "Châtelet",
+    "lat": 48.858634,
+    "lon": 2.347047,
+    "lines": [
+      "1",
+      "4",
+      "7",
+      "11",
+      "14"
+    ]
+  },
+  {
+    "id": "st-056",
+    "name": "Cité",
+    "lat": 48.854936,
+    "lon": 2.347321,
+    "lines": [
+      "4"
+    ]
+  },
+  {
+    "id": "st-057",
+    "name": "Cluny-La Sorbonne",
+    "lat": 48.85105,
+    "lon": 2.344273,
+    "lines": [
+      "10"
+    ]
+  },
+  {
+    "id": "st-058",
+    "name": "Colonel Fabien",
+    "lat": 48.87761,
+    "lon": 2.370811,
+    "lines": [
+      "2"
+    ]
+  },
+  {
+    "id": "st-059",
+    "name": "Commerce",
+    "lat": 48.844795,
+    "lon": 2.293952,
+    "lines": [
+      "8"
+    ]
+  },
+  {
+    "id": "st-060",
+    "name": "Concorde",
+    "lat": 48.866424,
+    "lon": 2.322734,
+    "lines": [
+      "1",
+      "8",
+      "12"
+    ]
+  },
+  {
+    "id": "st-061",
+    "name": "Convention",
+    "lat": 48.837099,
+    "lon": 2.296231,
+    "lines": [
+      "12"
+    ]
+  },
+  {
+    "id": "st-062",
+    "name": "Corentin Cariou",
+    "lat": 48.894656,
+    "lon": 2.38216,
+    "lines": [
+      "7"
+    ]
+  },
+  {
+    "id": "st-063",
+    "name": "Corentin Celton",
+    "lat": 48.827085,
+    "lon": 2.279412,
+    "lines": [
+      "12"
+    ]
+  },
+  {
+    "id": "st-064",
+    "name": "Corvisart",
+    "lat": 48.829791,
+    "lon": 2.350415,
+    "lines": [
+      "6"
+    ]
+  },
+  {
+    "id": "st-065",
+    "name": "Coteaux Beauclair",
+    "lat": 48.882244,
+    "lon": 2.467356,
+    "lines": [
+      "11"
+    ]
+  },
+  {
+    "id": "st-066",
+    "name": "Cour Saint-Émilion",
+    "lat": 48.833339,
+    "lon": 2.386632,
+    "lines": [
+      "14"
+    ]
+  },
+  {
+    "id": "st-067",
+    "name": "Courcelles",
+    "lat": 48.87933,
+    "lon": 2.30407,
+    "lines": [
+      "2"
+    ]
+  },
+  {
+    "id": "st-068",
+    "name": "Couronnes",
+    "lat": 48.869091,
+    "lon": 2.380543,
+    "lines": [
+      "2"
+    ]
+  },
+  {
+    "id": "st-069",
+    "name": "Crimée",
+    "lat": 48.890906,
+    "lon": 2.37709,
+    "lines": [
+      "7"
+    ]
+  },
+  {
+    "id": "st-070",
+    "name": "Croix de Chavaux",
+    "lat": 48.857784,
+    "lon": 2.434538,
+    "lines": [
+      "9"
+    ]
+  },
+  {
+    "id": "st-071",
+    "name": "Danube",
+    "lat": 48.881816,
+    "lon": 2.394012,
+    "lines": [
+      "7bis"
+    ]
+  },
+  {
+    "id": "st-072",
+    "name": "Daumesnil",
+    "lat": 48.839498,
+    "lon": 2.395943,
+    "lines": [
+      "6",
+      "8"
+    ]
+  },
+  {
+    "id": "st-073",
+    "name": "Denfert-Rochereau",
+    "lat": 48.833872,
+    "lon": 2.332296,
+    "lines": [
+      "4",
+      "6"
+    ]
+  },
+  {
+    "id": "st-074",
+    "name": "Dugommier",
+    "lat": 48.839041,
+    "lon": 2.38962,
+    "lines": [
+      "6"
+    ]
+  },
+  {
+    "id": "st-075",
+    "name": "Dupleix",
+    "lat": 48.850435,
+    "lon": 2.293612,
+    "lines": [
+      "6"
+    ]
+  },
+  {
+    "id": "st-076",
+    "name": "Duroc",
+    "lat": 48.847021,
+    "lon": 2.316715,
+    "lines": [
+      "10",
+      "13"
+    ]
+  },
+  {
+    "id": "st-077",
+    "name": "Edgar Quinet",
+    "lat": 48.840663,
+    "lon": 2.326385,
+    "lines": [
+      "6"
+    ]
+  },
+  {
+    "id": "st-078",
+    "name": "Esplanade de la Défense",
+    "lat": 48.888138,
+    "lon": 2.249793,
+    "lines": [
+      "1"
+    ]
+  },
+  {
+    "id": "st-079",
+    "name": "Europe",
+    "lat": 48.87877,
+    "lon": 2.322265,
+    "lines": [
+      "3"
+    ]
+  },
+  {
+    "id": "st-080",
+    "name": "Exelmans",
+    "lat": 48.842413,
+    "lon": 2.259608,
+    "lines": [
+      "9"
+    ]
+  },
+  {
+    "id": "st-081",
+    "name": "Faidherbe Chaligny",
+    "lat": 48.850178,
+    "lon": 2.384092,
+    "lines": [
+      "8"
+    ]
+  },
+  {
+    "id": "st-082",
+    "name": "Falguière",
+    "lat": 48.84447,
+    "lon": 2.317853,
+    "lines": [
+      "12"
+    ]
+  },
+  {
+    "id": "st-083",
+    "name": "Filles du Calvaire",
+    "lat": 48.863258,
+    "lon": 2.366661,
+    "lines": [
+      "8"
+    ]
+  },
+  {
+    "id": "st-084",
+    "name": "Franklin D. Roosevelt",
+    "lat": 48.869069,
+    "lon": 2.309056,
+    "lines": [
+      "1",
+      "9"
+    ]
+  },
+  {
+    "id": "st-085",
+    "name": "Félix Faure",
+    "lat": 48.842747,
+    "lon": 2.291912,
+    "lines": [
+      "8"
+    ]
+  },
+  {
+    "id": "st-086",
+    "name": "Gallieni",
+    "lat": 48.865335,
+    "lon": 2.416697,
+    "lines": [
+      "3"
+    ]
+  },
+  {
+    "id": "st-087",
+    "name": "Gambetta",
+    "lat": 48.864978,
+    "lon": 2.396913,
+    "lines": [
+      "3"
+    ]
+  },
+  {
+    "id": "st-088",
+    "name": "Gare d'Austerlitz",
+    "lat": 48.842398,
+    "lon": 2.365383,
+    "lines": [
+      "5",
+      "10"
+    ]
+  },
+  {
+    "id": "st-089",
+    "name": "Gare de Lyon",
+    "lat": 48.844678,
+    "lon": 2.373849,
+    "lines": [
+      "1",
+      "14"
+    ]
+  },
+  {
+    "id": "st-090",
+    "name": "Gare de l'Est",
+    "lat": 48.87613,
+    "lon": 2.357995,
+    "lines": [
+      "4",
+      "5",
+      "7"
+    ]
+  },
+  {
+    "id": "st-091",
+    "name": "Gare du Nord",
+    "lat": 48.879995,
+    "lon": 2.356713,
+    "lines": [
+      "4",
+      "5"
+    ]
+  },
+  {
+    "id": "st-092",
+    "name": "Gaîté",
+    "lat": 48.838632,
+    "lon": 2.322492,
+    "lines": [
+      "13"
+    ]
+  },
+  {
+    "id": "st-093",
+    "name": "George V",
+    "lat": 48.872024,
+    "lon": 2.30056,
+    "lines": [
+      "1"
+    ]
+  },
+  {
+    "id": "st-094",
+    "name": "Glacière",
+    "lat": 48.83113,
+    "lon": 2.343512,
+    "lines": [
+      "6"
+    ]
+  },
+  {
+    "id": "st-095",
+    "name": "Goncourt",
+    "lat": 48.869958,
+    "lon": 2.371095,
+    "lines": [
+      "11"
+    ]
+  },
+  {
+    "id": "st-096",
+    "name": "Grands Boulevards",
+    "lat": 48.871257,
+    "lon": 2.344561,
+    "lines": [
+      "8",
+      "9"
+    ]
+  },
+  {
+    "id": "st-097",
+    "name": "Guy Môquet",
+    "lat": 48.892207,
+    "lon": 2.32722,
+    "lines": [
+      "13"
+    ]
+  },
+  {
+    "id": "st-098",
+    "name": "Havre-Caumartin",
+    "lat": 48.873613,
+    "lon": 2.327619,
+    "lines": [
+      "3",
+      "9"
+    ]
+  },
+  {
+    "id": "st-099",
+    "name": "Hoche",
+    "lat": 48.891229,
+    "lon": 2.402352,
+    "lines": [
+      "5"
+    ]
+  },
+  {
+    "id": "st-100",
+    "name": "Hôtel de Ville",
+    "lat": 48.857465,
+    "lon": 2.351293,
+    "lines": [
+      "1",
+      "11"
+    ]
+  },
+  {
+    "id": "st-101",
+    "name": "Invalides",
+    "lat": 48.860205,
+    "lon": 2.314403,
+    "lines": [
+      "8",
+      "13"
+    ]
+  },
+  {
+    "id": "st-102",
+    "name": "Iéna",
+    "lat": 48.864794,
+    "lon": 2.294162,
+    "lines": [
+      "9"
+    ]
+  },
+  {
+    "id": "st-103",
+    "name": "Jacques Bonsergent",
+    "lat": 48.870396,
+    "lon": 2.3614,
+    "lines": [
+      "5"
+    ]
+  },
+  {
+    "id": "st-104",
+    "name": "Jasmin",
+    "lat": 48.852504,
+    "lon": 2.268177,
+    "lines": [
+      "9"
+    ]
+  },
+  {
+    "id": "st-105",
+    "name": "Jaurès",
+    "lat": 48.882428,
+    "lon": 2.370783,
+    "lines": [
+      "2",
+      "5",
+      "7bis"
+    ]
+  },
+  {
+    "id": "st-106",
+    "name": "Javel - André Citroën",
+    "lat": 48.846157,
+    "lon": 2.2784,
+    "lines": [
+      "10"
+    ]
+  },
+  {
+    "id": "st-107",
+    "name": "Jourdain",
+    "lat": 48.875112,
+    "lon": 2.389415,
+    "lines": [
+      "11"
+    ]
+  },
+  {
+    "id": "st-108",
+    "name": "Jules Joffrin",
+    "lat": 48.892419,
+    "lon": 2.344765,
+    "lines": [
+      "12"
+    ]
+  },
+  {
+    "id": "st-109",
+    "name": "Jussieu",
+    "lat": 48.846051,
+    "lon": 2.354984,
+    "lines": [
+      "7",
+      "10"
+    ]
+  },
+  {
+    "id": "st-110",
+    "name": "Kléber",
+    "lat": 48.871262,
+    "lon": 2.293241,
+    "lines": [
+      "6"
+    ]
+  },
+  {
+    "id": "st-111",
+    "name": "La Chapelle",
+    "lat": 48.8844,
+    "lon": 2.3604,
+    "lines": [
+      "2"
+    ]
+  },
+  {
+    "id": "st-112",
+    "name": "La Dhuys",
+    "lat": 48.877993,
+    "lon": 2.465472,
+    "lines": [
+      "11"
+    ]
+  },
+  {
+    "id": "st-113",
+    "name": "La Défense",
+    "lat": 48.892187,
+    "lon": 2.237018,
+    "lines": [
+      "1"
+    ]
+  },
+  {
+    "id": "st-114",
+    "name": "La Fourche",
+    "lat": 48.887184,
+    "lon": 2.32578,
+    "lines": [
+      "13"
+    ]
+  },
+  {
+    "id": "st-115",
+    "name": "La Motte Picquet-Grenelle",
+    "lat": 48.849297,
+    "lon": 2.298727,
+    "lines": [
+      "6",
+      "8",
+      "10"
+    ]
+  },
+  {
+    "id": "st-116",
+    "name": "La Muette",
+    "lat": 48.858046,
+    "lon": 2.274155,
+    "lines": [
+      "9"
+    ]
+  },
+  {
+    "id": "st-117",
+    "name": "La Tour Maubourg",
+    "lat": 48.857725,
+    "lon": 2.310566,
+    "lines": [
+      "8"
+    ]
+  },
+  {
+    "id": "st-118",
+    "name": "Lamarck-Caulaincourt",
+    "lat": 48.889674,
+    "lon": 2.338761,
+    "lines": [
+      "12"
+    ]
+  },
+  {
+    "id": "st-119",
+    "name": "Laumière",
+    "lat": 48.884971,
+    "lon": 2.378717,
+    "lines": [
+      "5"
+    ]
+  },
+  {
+    "id": "st-120",
+    "name": "Le Peletier",
+    "lat": 48.874972,
+    "lon": 2.340576,
+    "lines": [
+      "7"
+    ]
+  },
+  {
+    "id": "st-121",
+    "name": "Ledru Rollin",
+    "lat": 48.851524,
+    "lon": 2.375101,
+    "lines": [
+      "8"
+    ]
+  },
+  {
+    "id": "st-122",
+    "name": "Les Gobelins",
+    "lat": 48.83593,
+    "lon": 2.352542,
+    "lines": [
+      "7"
+    ]
+  },
+  {
+    "id": "st-123",
+    "name": "Les Halles",
+    "lat": 48.862515,
+    "lon": 2.345786,
+    "lines": [
+      "4"
+    ]
+  },
+  {
+    "id": "st-124",
+    "name": "Les Sablons",
+    "lat": 48.881016,
+    "lon": 2.272239,
+    "lines": [
+      "1"
+    ]
+  },
+  {
+    "id": "st-125",
+    "name": "Liberté",
+    "lat": 48.82662,
+    "lon": 2.405852,
+    "lines": [
+      "8"
+    ]
+  },
+  {
+    "id": "st-126",
+    "name": "Liège",
+    "lat": 48.879635,
+    "lon": 2.327022,
+    "lines": [
+      "13"
+    ]
+  },
+  {
+    "id": "st-127",
+    "name": "Louis Blanc",
+    "lat": 48.881069,
+    "lon": 2.364686,
+    "lines": [
+      "7",
+      "7bis"
+    ]
+  },
+  {
+    "id": "st-128",
+    "name": "Louise Michel",
+    "lat": 48.888706,
+    "lon": 2.288084,
+    "lines": [
+      "3"
+    ]
+  },
+  {
+    "id": "st-129",
+    "name": "Lourmel",
+    "lat": 48.838735,
+    "lon": 2.282143,
+    "lines": [
+      "8"
+    ]
+  },
+  {
+    "id": "st-130",
+    "name": "Louvre-Rivoli",
+    "lat": 48.860806,
+    "lon": 2.341109,
+    "lines": [
+      "1"
+    ]
+  },
+  {
+    "id": "st-131",
+    "name": "Mabillon",
+    "lat": 48.853017,
+    "lon": 2.335502,
+    "lines": [
+      "10"
+    ]
+  },
+  {
+    "id": "st-132",
+    "name": "Madeleine",
+    "lat": 48.870178,
+    "lon": 2.325729,
+    "lines": [
+      "8",
+      "12",
+      "14"
+    ]
+  },
+  {
+    "id": "st-133",
+    "name": "Mairie d'Issy",
+    "lat": 48.824309,
+    "lon": 2.273666,
+    "lines": [
+      "12"
+    ]
+  },
+  {
+    "id": "st-134",
+    "name": "Mairie de Clichy",
+    "lat": 48.903234,
+    "lon": 2.306011,
+    "lines": [
+      "13"
+    ]
+  },
+  {
+    "id": "st-135",
+    "name": "Mairie de Montreuil",
+    "lat": 48.862299,
+    "lon": 2.441522,
+    "lines": [
+      "9"
+    ]
+  },
+  {
+    "id": "st-136",
+    "name": "Mairie de Montrouge",
+    "lat": 48.818676,
+    "lon": 2.31974,
+    "lines": [
+      "4"
+    ]
+  },
+  {
+    "id": "st-137",
+    "name": "Mairie des Lilas",
+    "lat": 48.879761,
+    "lon": 2.41648,
+    "lines": [
+      "11"
+    ]
+  },
+  {
+    "id": "st-138",
+    "name": "Maison Blanche",
+    "lat": 48.821802,
+    "lon": 2.358803,
+    "lines": [
+      "7",
+      "14"
+    ]
+  },
+  {
+    "id": "st-139",
+    "name": "Malakoff - Plateau de Vanves",
+    "lat": 48.822584,
+    "lon": 2.298464,
+    "lines": [
+      "13"
+    ]
+  },
+  {
+    "id": "st-140",
+    "name": "Malakoff - Rue Étienne Dolet",
+    "lat": 48.815308,
+    "lon": 2.297078,
+    "lines": [
+      "13"
+    ]
+  },
+  {
+    "id": "st-141",
+    "name": "Malesherbes",
+    "lat": 48.882892,
+    "lon": 2.309052,
+    "lines": [
+      "3"
+    ]
+  },
+  {
+    "id": "st-142",
+    "name": "Maraîchers",
+    "lat": 48.852725,
+    "lon": 2.406089,
+    "lines": [
+      "9"
+    ]
+  },
+  {
+    "id": "st-143",
+    "name": "Marcadet-Poissonniers",
+    "lat": 48.891452,
+    "lon": 2.349721,
+    "lines": [
+      "4",
+      "12"
+    ]
+  },
+  {
+    "id": "st-144",
+    "name": "Marcel Sembat",
+    "lat": 48.833629,
+    "lon": 2.243579,
+    "lines": [
+      "9"
+    ]
+  },
+  {
+    "id": "st-145",
+    "name": "Marx Dormoy",
+    "lat": 48.890485,
+    "lon": 2.359996,
+    "lines": [
+      "12"
+    ]
+  },
+  {
+    "id": "st-146",
+    "name": "Maubert-Mutualité",
+    "lat": 48.85009,
+    "lon": 2.348209,
+    "lines": [
+      "10"
+    ]
+  },
+  {
+    "id": "st-147",
+    "name": "Michel Ange-Auteuil",
+    "lat": 48.847915,
+    "lon": 2.26415,
+    "lines": [
+      "9",
+      "10"
+    ]
+  },
+  {
+    "id": "st-148",
+    "name": "Michel Ange-Molitor",
+    "lat": 48.845153,
+    "lon": 2.261684,
+    "lines": [
+      "9",
+      "10"
+    ]
+  },
+  {
+    "id": "st-149",
+    "name": "Michel Bizot",
+    "lat": 48.837117,
+    "lon": 2.402333,
+    "lines": [
+      "8"
+    ]
+  },
+  {
+    "id": "st-150",
+    "name": "Mirabeau",
+    "lat": 48.847131,
+    "lon": 2.272764,
+    "lines": [
+      "10"
+    ]
+  },
+  {
+    "id": "st-151",
+    "name": "Miromesnil",
+    "lat": 48.873752,
+    "lon": 2.3146,
+    "lines": [
+      "9",
+      "13"
+    ]
+  },
+  {
+    "id": "st-152",
+    "name": "Monceau",
+    "lat": 48.880325,
+    "lon": 2.308774,
+    "lines": [
+      "2"
+    ]
+  },
+  {
+    "id": "st-153",
+    "name": "Montgallet",
+    "lat": 48.844066,
+    "lon": 2.390482,
+    "lines": [
+      "8"
+    ]
+  },
+  {
+    "id": "st-154",
+    "name": "Montparnasse Bienvenüe",
+    "lat": 48.843735,
+    "lon": 2.324353,
+    "lines": [
+      "12"
+    ]
+  },
+  {
+    "id": "st-155",
+    "name": "Montparnasse-Bienvenüe",
+    "lat": 48.842737,
+    "lon": 2.32222,
+    "lines": [
+      "4",
+      "6",
+      "13"
+    ]
+  },
+  {
+    "id": "st-156",
+    "name": "Montreuil - Hôpital",
+    "lat": 48.878337,
+    "lon": 2.454714,
+    "lines": [
+      "11"
+    ]
+  },
+  {
+    "id": "st-157",
+    "name": "Mouton-Duvernet",
+    "lat": 48.831113,
+    "lon": 2.329705,
+    "lines": [
+      "4"
+    ]
+  },
+  {
+    "id": "st-158",
+    "name": "Ménilmontant",
+    "lat": 48.866447,
+    "lon": 2.383599,
+    "lines": [
+      "2"
+    ]
+  },
+  {
+    "id": "st-159",
+    "name": "Nation",
+    "lat": 48.848093,
+    "lon": 2.39549,
+    "lines": [
+      "1",
+      "2",
+      "6",
+      "9"
+    ]
+  },
+  {
+    "id": "st-160",
+    "name": "Nationale",
+    "lat": 48.833217,
+    "lon": 2.362856,
+    "lines": [
+      "6"
+    ]
+  },
+  {
+    "id": "st-161",
+    "name": "Notre-Dame-de-Lorette",
+    "lat": 48.876047,
+    "lon": 2.337496,
+    "lines": [
+      "12"
+    ]
+  },
+  {
+    "id": "st-162",
+    "name": "Notre-Dame-des-Champs",
+    "lat": 48.844943,
+    "lon": 2.328778,
+    "lines": [
+      "12"
+    ]
+  },
+  {
+    "id": "st-163",
+    "name": "Oberkampf",
+    "lat": 48.864992,
+    "lon": 2.367956,
+    "lines": [
+      "5",
+      "9"
+    ]
+  },
+  {
+    "id": "st-164",
+    "name": "Odéon",
+    "lat": 48.852118,
+    "lon": 2.34017,
+    "lines": [
+      "4",
+      "10"
+    ]
+  },
+  {
+    "id": "st-165",
+    "name": "Olympiades",
+    "lat": 48.827271,
+    "lon": 2.368033,
+    "lines": [
+      "14"
+    ]
+  },
+  {
+    "id": "st-166",
+    "name": "Opéra",
+    "lat": 48.870577,
+    "lon": 2.331758,
+    "lines": [
+      "3",
+      "7",
+      "8"
+    ]
+  },
+  {
+    "id": "st-167",
+    "name": "Ourcq",
+    "lat": 48.886857,
+    "lon": 2.385913,
+    "lines": [
+      "5"
+    ]
+  },
+  {
+    "id": "st-168",
+    "name": "Palais Royal - Musée du Louvre",
+    "lat": 48.862589,
+    "lon": 2.336687,
+    "lines": [
+      "1",
+      "7"
+    ]
+  },
+  {
+    "id": "st-169",
+    "name": "Parmentier",
+    "lat": 48.865254,
+    "lon": 2.374582,
+    "lines": [
+      "3"
+    ]
+  },
+  {
+    "id": "st-170",
+    "name": "Passy",
+    "lat": 48.857449,
+    "lon": 2.285812,
+    "lines": [
+      "6"
+    ]
+  },
+  {
+    "id": "st-171",
+    "name": "Pasteur",
+    "lat": 48.842774,
+    "lon": 2.31263,
+    "lines": [
+      "6",
+      "12"
+    ]
+  },
+  {
+    "id": "st-172",
+    "name": "Pereire-Levallois",
+    "lat": 48.884896,
+    "lon": 2.297724,
+    "lines": [
+      "3"
+    ]
+  },
+  {
+    "id": "st-173",
+    "name": "Pernety",
+    "lat": 48.834226,
+    "lon": 2.318616,
+    "lines": [
+      "13"
+    ]
+  },
+  {
+    "id": "st-174",
+    "name": "Philippe Auguste",
+    "lat": 48.858062,
+    "lon": 2.390861,
+    "lines": [
+      "2"
+    ]
+  },
+  {
+    "id": "st-175",
+    "name": "Picpus",
+    "lat": 48.845062,
+    "lon": 2.401289,
+    "lines": [
+      "6"
+    ]
+  },
+  {
+    "id": "st-176",
+    "name": "Pierre et Marie Curie",
+    "lat": 48.815931,
+    "lon": 2.377267,
+    "lines": [
+      "7"
+    ]
+  },
+  {
+    "id": "st-177",
+    "name": "Pigalle",
+    "lat": 48.882237,
+    "lon": 2.337699,
+    "lines": [
+      "2",
+      "12"
+    ]
+  },
+  {
+    "id": "st-178",
+    "name": "Place Monge",
+    "lat": 48.842867,
+    "lon": 2.352225,
+    "lines": [
+      "7"
+    ]
+  },
+  {
+    "id": "st-179",
+    "name": "Place d'Italie",
+    "lat": 48.831111,
+    "lon": 2.355782,
+    "lines": [
+      "5",
+      "6",
+      "7"
+    ]
+  },
+  {
+    "id": "st-180",
+    "name": "Place de Clichy",
+    "lat": 48.883902,
+    "lon": 2.327887,
+    "lines": [
+      "2",
+      "13"
+    ]
+  },
+  {
+    "id": "st-181",
+    "name": "Place des Fêtes",
+    "lat": 48.876878,
+    "lon": 2.39302,
+    "lines": [
+      "11",
+      "7bis"
+    ]
+  },
+  {
+    "id": "st-182",
+    "name": "Plaisance",
+    "lat": 48.831826,
+    "lon": 2.314122,
+    "lines": [
+      "13"
+    ]
+  },
+  {
+    "id": "st-183",
+    "name": "Poissonnière",
+    "lat": 48.8771,
+    "lon": 2.348776,
+    "lines": [
+      "7"
+    ]
+  },
+  {
+    "id": "st-184",
+    "name": "Pont Cardinet",
+    "lat": 48.889561,
+    "lon": 2.315177,
+    "lines": [
+      "14"
+    ]
+  },
+  {
+    "id": "st-185",
+    "name": "Pont Marie",
+    "lat": 48.853575,
+    "lon": 2.357163,
+    "lines": [
+      "7"
+    ]
+  },
+  {
+    "id": "st-186",
+    "name": "Pont Neuf",
+    "lat": 48.858554,
+    "lon": 2.342233,
+    "lines": [
+      "7"
+    ]
+  },
+  {
+    "id": "st-187",
+    "name": "Pont de Levallois",
+    "lat": 48.897154,
+    "lon": 2.280414,
+    "lines": [
+      "3"
+    ]
+  },
+  {
+    "id": "st-188",
+    "name": "Pont de Neuilly",
+    "lat": 48.884708,
+    "lon": 2.260515,
+    "lines": [
+      "1"
+    ]
+  },
+  {
+    "id": "st-189",
+    "name": "Pont de Sèvres",
+    "lat": 48.829746,
+    "lon": 2.231028,
+    "lines": [
+      "9"
+    ]
+  },
+  {
+    "id": "st-190",
+    "name": "Porte Dauphine",
+    "lat": 48.871467,
+    "lon": 2.277083,
+    "lines": [
+      "2"
+    ]
+  },
+  {
+    "id": "st-191",
+    "name": "Porte Dorée",
+    "lat": 48.834785,
+    "lon": 2.405383,
+    "lines": [
+      "8"
+    ]
+  },
+  {
+    "id": "st-192",
+    "name": "Porte Maillot",
+    "lat": 48.877551,
+    "lon": 2.283162,
+    "lines": [
+      "1"
+    ]
+  },
+  {
+    "id": "st-193",
+    "name": "Porte d'Auteuil",
+    "lat": 48.847972,
+    "lon": 2.257745,
+    "lines": [
+      "10"
+    ]
+  },
+  {
+    "id": "st-194",
+    "name": "Porte d'Italie",
+    "lat": 48.819223,
+    "lon": 2.359705,
+    "lines": [
+      "7"
+    ]
+  },
+  {
+    "id": "st-195",
+    "name": "Porte d'Ivry",
+    "lat": 48.821356,
+    "lon": 2.369291,
+    "lines": [
+      "7"
+    ]
+  },
+  {
+    "id": "st-196",
+    "name": "Porte d'Orléans",
+    "lat": 48.823412,
+    "lon": 2.325576,
+    "lines": [
+      "4"
+    ]
+  },
+  {
+    "id": "st-197",
+    "name": "Porte de Bagnolet",
+    "lat": 48.8646,
+    "lon": 2.408031,
+    "lines": [
+      "3"
+    ]
+  },
+  {
+    "id": "st-198",
+    "name": "Porte de Champerret",
+    "lat": 48.886006,
+    "lon": 2.29353,
+    "lines": [
+      "3"
+    ]
+  },
+  {
+    "id": "st-199",
+    "name": "Porte de Charenton",
+    "lat": 48.832737,
+    "lon": 2.40031,
+    "lines": [
+      "8"
+    ]
+  },
+  {
+    "id": "st-200",
+    "name": "Porte de Choisy",
+    "lat": 48.819876,
+    "lon": 2.364532,
+    "lines": [
+      "7"
+    ]
+  },
+  {
+    "id": "st-201",
+    "name": "Porte de Clichy",
+    "lat": 48.894617,
+    "lon": 2.313282,
+    "lines": [
+      "13",
+      "14"
+    ]
+  },
+  {
+    "id": "st-202",
+    "name": "Porte de Clignancourt",
+    "lat": 48.897402,
+    "lon": 2.344848,
+    "lines": [
+      "4"
+    ]
+  },
+  {
+    "id": "st-203",
+    "name": "Porte de Montreuil",
+    "lat": 48.853773,
+    "lon": 2.411895,
+    "lines": [
+      "9"
+    ]
+  },
+  {
+    "id": "st-204",
+    "name": "Porte de Pantin",
+    "lat": 48.888417,
+    "lon": 2.391784,
+    "lines": [
+      "5"
+    ]
+  },
+  {
+    "id": "st-205",
+    "name": "Porte de Saint-Cloud",
+    "lat": 48.837961,
+    "lon": 2.257122,
+    "lines": [
+      "9"
+    ]
+  },
+  {
+    "id": "st-206",
+    "name": "Porte de Saint-Ouen",
+    "lat": 48.897375,
+    "lon": 2.328943,
+    "lines": [
+      "13"
+    ]
+  },
+  {
+    "id": "st-207",
+    "name": "Porte de Vanves",
+    "lat": 48.827796,
+    "lon": 2.305535,
+    "lines": [
+      "13"
+    ]
+  },
+  {
+    "id": "st-208",
+    "name": "Porte de Versailles",
+    "lat": 48.832449,
+    "lon": 2.288022,
+    "lines": [
+      "12"
+    ]
+  },
+  {
+    "id": "st-209",
+    "name": "Porte de Vincennes",
+    "lat": 48.847336,
+    "lon": 2.408089,
+    "lines": [
+      "1"
+    ]
+  },
+  {
+    "id": "st-210",
+    "name": "Porte de la Chapelle",
+    "lat": 48.897245,
+    "lon": 2.359508,
+    "lines": [
+      "12"
+    ]
+  },
+  {
+    "id": "st-211",
+    "name": "Porte de la Villette",
+    "lat": 48.89739,
+    "lon": 2.385508,
+    "lines": [
+      "7"
+    ]
+  },
+  {
+    "id": "st-212",
+    "name": "Porte des Lilas",
+    "lat": 48.877175,
+    "lon": 2.40648,
+    "lines": [
+      "11"
+    ]
+  },
+  {
+    "id": "st-213",
+    "name": "Pré Saint-Gervais",
+    "lat": 48.880272,
+    "lon": 2.398468,
+    "lines": [
+      "7bis"
+    ]
+  },
+  {
+    "id": "st-214",
+    "name": "Pyramides",
+    "lat": 48.865822,
+    "lon": 2.334314,
+    "lines": [
+      "7",
+      "14"
+    ]
+  },
+  {
+    "id": "st-215",
+    "name": "Pyrénées",
+    "lat": 48.873882,
+    "lon": 2.385316,
+    "lines": [
+      "11"
+    ]
+  },
+  {
+    "id": "st-216",
+    "name": "Père Lachaise",
+    "lat": 48.862653,
+    "lon": 2.386859,
+    "lines": [
+      "2",
+      "3"
+    ]
+  },
+  {
+    "id": "st-217",
+    "name": "Quai de la Gare",
+    "lat": 48.837045,
+    "lon": 2.372826,
+    "lines": [
+      "6"
+    ]
+  },
+  {
+    "id": "st-218",
+    "name": "Quai de la Rapée",
+    "lat": 48.846485,
+    "lon": 2.36591,
+    "lines": [
+      "5"
+    ]
+  },
+  {
+    "id": "st-219",
+    "name": "Quatre Septembre",
+    "lat": 48.869638,
+    "lon": 2.336233,
+    "lines": [
+      "3"
+    ]
+  },
+  {
+    "id": "st-220",
+    "name": "Rambuteau",
+    "lat": 48.861205,
+    "lon": 2.353496,
+    "lines": [
+      "11"
+    ]
+  },
+  {
+    "id": "st-221",
+    "name": "Ranelagh",
+    "lat": 48.855485,
+    "lon": 2.270109,
+    "lines": [
+      "9"
+    ]
+  },
+  {
+    "id": "st-222",
+    "name": "Raspail",
+    "lat": 48.838964,
+    "lon": 2.330754,
+    "lines": [
+      "4",
+      "6"
+    ]
+  },
+  {
+    "id": "st-223",
+    "name": "Rennes",
+    "lat": 48.848458,
+    "lon": 2.327782,
+    "lines": [
+      "12"
+    ]
+  },
+  {
+    "id": "st-224",
+    "name": "Reuilly-Diderot",
+    "lat": 48.847154,
+    "lon": 2.386134,
+    "lines": [
+      "1",
+      "8"
+    ]
+  },
+  {
+    "id": "st-225",
+    "name": "Richard Lenoir",
+    "lat": 48.859874,
+    "lon": 2.371914,
+    "lines": [
+      "5"
+    ]
+  },
+  {
+    "id": "st-226",
+    "name": "Richelieu-Drouot",
+    "lat": 48.871942,
+    "lon": 2.33866,
+    "lines": [
+      "8",
+      "9"
+    ]
+  },
+  {
+    "id": "st-227",
+    "name": "Riquet",
+    "lat": 48.887968,
+    "lon": 2.373457,
+    "lines": [
+      "7"
+    ]
+  },
+  {
+    "id": "st-228",
+    "name": "Robespierre",
+    "lat": 48.855726,
+    "lon": 2.422983,
+    "lines": [
+      "9"
+    ]
+  },
+  {
+    "id": "st-229",
+    "name": "Romainville - Carnot",
+    "lat": 48.883136,
+    "lon": 2.440822,
+    "lines": [
+      "11"
+    ]
+  },
+  {
+    "id": "st-230",
+    "name": "Rome",
+    "lat": 48.882333,
+    "lon": 2.321802,
+    "lines": [
+      "2"
+    ]
+  },
+  {
+    "id": "st-231",
+    "name": "Rue Saint-Maur",
+    "lat": 48.864286,
+    "lon": 2.379742,
+    "lines": [
+      "3"
+    ]
+  },
+  {
+    "id": "st-232",
+    "name": "Rue de la Pompe",
+    "lat": 48.86394,
+    "lon": 2.278442,
+    "lines": [
+      "9"
+    ]
+  },
+  {
+    "id": "st-233",
+    "name": "Rue des Boulets",
+    "lat": 48.852168,
+    "lon": 2.389626,
+    "lines": [
+      "9"
+    ]
+  },
+  {
+    "id": "st-234",
+    "name": "Rue du Bac",
+    "lat": 48.855196,
+    "lon": 2.325816,
+    "lines": [
+      "12"
+    ]
+  },
+  {
+    "id": "st-235",
+    "name": "Réaumur Sébastopol",
+    "lat": 48.866615,
+    "lon": 2.352094,
+    "lines": [
+      "3",
+      "4"
+    ]
+  },
+  {
+    "id": "st-236",
+    "name": "République",
+    "lat": 48.867647,
+    "lon": 2.36375,
+    "lines": [
+      "3",
+      "5",
+      "8",
+      "9",
+      "11"
+    ]
+  },
+  {
+    "id": "st-237",
+    "name": "Saint-Ambroise",
+    "lat": 48.861476,
+    "lon": 2.373944,
+    "lines": [
+      "9"
+    ]
+  },
+  {
+    "id": "st-238",
+    "name": "Saint-Augustin",
+    "lat": 48.874476,
+    "lon": 2.322002,
+    "lines": [
+      "9"
+    ]
+  },
+  {
+    "id": "st-239",
+    "name": "Saint-François-Xavier",
+    "lat": 48.851442,
+    "lon": 2.314408,
+    "lines": [
+      "13"
+    ]
+  },
+  {
+    "id": "st-240",
+    "name": "Saint-Georges",
+    "lat": 48.878173,
+    "lon": 2.337858,
+    "lines": [
+      "12"
+    ]
+  },
+  {
+    "id": "st-241",
+    "name": "Saint-Germain-des-Prés",
+    "lat": 48.853719,
+    "lon": 2.333776,
+    "lines": [
+      "4"
+    ]
+  },
+  {
+    "id": "st-242",
+    "name": "Saint-Jacques",
+    "lat": 48.832901,
+    "lon": 2.337135,
+    "lines": [
+      "6"
+    ]
+  },
+  {
+    "id": "st-243",
+    "name": "Saint-Lazare",
+    "lat": 48.875491,
+    "lon": 2.325481,
+    "lines": [
+      "3",
+      "12",
+      "13",
+      "14"
+    ]
+  },
+  {
+    "id": "st-244",
+    "name": "Saint-Mandé",
+    "lat": 48.846423,
+    "lon": 2.41876,
+    "lines": [
+      "1"
+    ]
+  },
+  {
+    "id": "st-245",
+    "name": "Saint-Marcel",
+    "lat": 48.838427,
+    "lon": 2.360967,
+    "lines": [
+      "5"
+    ]
+  },
+  {
+    "id": "st-246",
+    "name": "Saint-Michel",
+    "lat": 48.853168,
+    "lon": 2.343286,
+    "lines": [
+      "4"
+    ]
+  },
+  {
+    "id": "st-247",
+    "name": "Saint-Ouen",
+    "lat": 48.904496,
+    "lon": 2.321744,
+    "lines": [
+      "14"
+    ]
+  },
+  {
+    "id": "st-248",
+    "name": "Saint-Paul",
+    "lat": 48.855236,
+    "lon": 2.360956,
+    "lines": [
+      "1"
+    ]
+  },
+  {
+    "id": "st-249",
+    "name": "Saint-Philippe du Roule",
+    "lat": 48.872046,
+    "lon": 2.310019,
+    "lines": [
+      "9"
+    ]
+  },
+  {
+    "id": "st-250",
+    "name": "Saint-Placide",
+    "lat": 48.846878,
+    "lon": 2.326793,
+    "lines": [
+      "4"
+    ]
+  },
+  {
+    "id": "st-251",
+    "name": "Saint-Sulpice",
+    "lat": 48.851071,
+    "lon": 2.330701,
+    "lines": [
+      "4"
+    ]
+  },
+  {
+    "id": "st-252",
+    "name": "Saint-Sébastien-Froissart",
+    "lat": 48.861169,
+    "lon": 2.367211,
+    "lines": [
+      "8"
+    ]
+  },
+  {
+    "id": "st-253",
+    "name": "Sentier",
+    "lat": 48.867513,
+    "lon": 2.346552,
+    "lines": [
+      "3"
+    ]
+  },
+  {
+    "id": "st-254",
+    "name": "Serge Gainsbourg",
+    "lat": 48.881316,
+    "lon": 2.427186,
+    "lines": [
+      "11"
+    ]
+  },
+  {
+    "id": "st-255",
+    "name": "Simplon",
+    "lat": 48.894344,
+    "lon": 2.347431,
+    "lines": [
+      "4"
+    ]
+  },
+  {
+    "id": "st-256",
+    "name": "Solférino",
+    "lat": 48.858499,
+    "lon": 2.323168,
+    "lines": [
+      "12"
+    ]
+  },
+  {
+    "id": "st-257",
+    "name": "Stalingrad",
+    "lat": 48.884469,
+    "lon": 2.367591,
+    "lines": [
+      "2",
+      "5",
+      "7"
+    ]
+  },
+  {
+    "id": "st-258",
+    "name": "Strasbourg-Saint-Denis",
+    "lat": 48.869478,
+    "lon": 2.354035,
+    "lines": [
+      "4",
+      "8",
+      "9"
+    ]
+  },
+  {
+    "id": "st-259",
+    "name": "Sully-Morland",
+    "lat": 48.851621,
+    "lon": 2.361525,
+    "lines": [
+      "7"
+    ]
+  },
+  {
+    "id": "st-260",
+    "name": "Sèvres-Babylone",
+    "lat": 48.851397,
+    "lon": 2.326462,
+    "lines": [
+      "10",
+      "12"
+    ]
+  },
+  {
+    "id": "st-261",
+    "name": "Sèvres-Lecourbe",
+    "lat": 48.845627,
+    "lon": 2.309531,
+    "lines": [
+      "6"
+    ]
+  },
+  {
+    "id": "st-262",
+    "name": "Ségur",
+    "lat": 48.847066,
+    "lon": 2.307402,
+    "lines": [
+      "10"
+    ]
+  },
+  {
+    "id": "st-263",
+    "name": "Temple",
+    "lat": 48.866514,
+    "lon": 2.360804,
+    "lines": [
+      "3"
+    ]
+  },
+  {
+    "id": "st-264",
+    "name": "Ternes",
+    "lat": 48.877973,
+    "lon": 2.29831,
+    "lines": [
+      "2"
+    ]
+  },
+  {
+    "id": "st-265",
+    "name": "Tolbiac",
+    "lat": 48.826426,
+    "lon": 2.357246,
+    "lines": [
+      "7"
+    ]
+  },
+  {
+    "id": "st-266",
+    "name": "Trinité d'Estienne d'Orves",
+    "lat": 48.87633,
+    "lon": 2.333109,
+    "lines": [
+      "12"
+    ]
+  },
+  {
+    "id": "st-267",
+    "name": "Trocadéro",
+    "lat": 48.863338,
+    "lon": 2.286912,
+    "lines": [
+      "6",
+      "9"
+    ]
+  },
+  {
+    "id": "st-268",
+    "name": "Tuileries",
+    "lat": 48.864344,
+    "lon": 2.33013,
+    "lines": [
+      "1"
+    ]
+  },
+  {
+    "id": "st-269",
+    "name": "Télégraphe",
+    "lat": 48.875474,
+    "lon": 2.398868,
+    "lines": [
+      "11"
+    ]
+  },
+  {
+    "id": "st-270",
+    "name": "Vaneau",
+    "lat": 48.848816,
+    "lon": 2.321258,
+    "lines": [
+      "10"
+    ]
+  },
+  {
+    "id": "st-271",
+    "name": "Varenne",
+    "lat": 48.856871,
+    "lon": 2.315057,
+    "lines": [
+      "13"
+    ]
+  },
+  {
+    "id": "st-272",
+    "name": "Vaugirard",
+    "lat": 48.839517,
+    "lon": 2.301108,
+    "lines": [
+      "12"
+    ]
+  },
+  {
+    "id": "st-273",
+    "name": "Vavin",
+    "lat": 48.842218,
+    "lon": 2.329009,
+    "lines": [
+      "4"
+    ]
+  },
+  {
+    "id": "st-274",
+    "name": "Victor Hugo",
+    "lat": 48.869799,
+    "lon": 2.285335,
+    "lines": [
+      "2"
+    ]
+  },
+  {
+    "id": "st-275",
+    "name": "Villiers",
+    "lat": 48.881094,
+    "lon": 2.314721,
+    "lines": [
+      "2",
+      "3"
+    ]
+  },
+  {
+    "id": "st-276",
+    "name": "Volontaires",
+    "lat": 48.841506,
+    "lon": 2.307949,
+    "lines": [
+      "12"
+    ]
+  },
+  {
+    "id": "st-277",
+    "name": "Voltaire",
+    "lat": 48.857878,
+    "lon": 2.380021,
+    "lines": [
+      "9"
+    ]
+  },
+  {
+    "id": "st-278",
+    "name": "Wagram",
+    "lat": 48.883809,
+    "lon": 2.304674,
+    "lines": [
+      "3"
+    ]
+  },
+  {
+    "id": "st-279",
+    "name": "École Militaire",
+    "lat": 48.854891,
+    "lon": 2.306403,
+    "lines": [
+      "8"
+    ]
+  },
+  {
+    "id": "st-280",
+    "name": "Église d'Auteuil",
+    "lat": 48.84715,
+    "lon": 2.269136,
+    "lines": [
+      "10"
+    ]
+  },
+  {
+    "id": "st-281",
+    "name": "Église de Pantin",
+    "lat": 48.89315,
+    "lon": 2.412763,
+    "lines": [
+      "5"
+    ]
+  },
+  {
+    "id": "st-282",
+    "name": "Étienne Marcel",
+    "lat": 48.863972,
+    "lon": 2.349618,
+    "lines": [
+      "4"
+    ]
+  }
+]

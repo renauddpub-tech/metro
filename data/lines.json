@@ -1,0 +1,77 @@
+[
+  {
+    "id": "1",
+    "label": "Ligne 1",
+    "color": "#FFCD00"
+  },
+  {
+    "id": "2",
+    "label": "Ligne 2",
+    "color": "#0064B0"
+  },
+  {
+    "id": "3",
+    "label": "Ligne 3",
+    "color": "#9F9825"
+  },
+  {
+    "id": "4",
+    "label": "Ligne 4",
+    "color": "#C04191"
+  },
+  {
+    "id": "5",
+    "label": "Ligne 5",
+    "color": "#F28E42"
+  },
+  {
+    "id": "6",
+    "label": "Ligne 6",
+    "color": "#83C491"
+  },
+  {
+    "id": "7",
+    "label": "Ligne 7",
+    "color": "#F3A4BA"
+  },
+  {
+    "id": "8",
+    "label": "Ligne 8",
+    "color": "#CEADD2"
+  },
+  {
+    "id": "9",
+    "label": "Ligne 9",
+    "color": "#D5C900"
+  },
+  {
+    "id": "10",
+    "label": "Ligne 10",
+    "color": "#E3B32A"
+  },
+  {
+    "id": "11",
+    "label": "Ligne 11",
+    "color": "#8D5E2A"
+  },
+  {
+    "id": "12",
+    "label": "Ligne 12",
+    "color": "#00814F"
+  },
+  {
+    "id": "13",
+    "label": "Ligne 13",
+    "color": "#98D4E2"
+  },
+  {
+    "id": "14",
+    "label": "Ligne 14",
+    "color": "#662483"
+  },
+  {
+    "id": "7bis",
+    "label": "Ligne 7bis",
+    "color": "#83C491"
+  }
+]

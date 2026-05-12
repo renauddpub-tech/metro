@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Métropoli — Le jeu pour apprendre le métro parisien</title>
+  <meta name="description" content="Jeu interactif pour mémoriser les stations et lignes du métro parisien sur une carte réelle." />
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <!-- Police premium sobre -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+  <!-- ========== ÉCRAN ACCUEIL ========== -->
+  <section id="screen-home" class="screen is-active">
+    <div class="home-wrap">
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <span class="brand-name">Métropoli</span>
+      </div>
+      <h1 class="home-title">Apprenez le métro parisien <em>en jouant</em>.</h1>
+      <p class="home-lead">
+        Un jeu de mémoire géographique. Vous repérez les stations sur une vraie carte
+        de Paris, vous associez chacune à sa ligne. Le jeu retient vos faiblesses
+        et vous fait progresser, session après session.
+      </p>
+
+      <form id="profile-form" class="profile-card" autocomplete="off">
+        <label for="pseudo">Votre pseudo</label>
+        <input id="pseudo" name="pseudo" type="text" maxlength="20" placeholder="ex. Renaud" required />
+        <fieldset class="difficulty">
+          <legend>Difficulté de la session</legend>
+          <label><input type="radio" name="difficulty" value="easy" /> Découverte</label>
+          <label><input type="radio" name="difficulty" value="normal" checked /> Entraînement</label>
+          <label><input type="radio" name="difficulty" value="hard" /> Consolidation</label>
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Commencer la session</button>
+      </form>
+
+      <div class="home-stats" id="home-stats" hidden>
+        <h2>Vos dernières sessions</h2>
+        <div id="history-list" class="history-list"></div>
+        <button id="reset-profile" type="button" class="btn btn-ghost">Réinitialiser mon profil</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ÉCRAN DE JEU ========== -->
+  <section id="screen-game" class="screen">
+    <header class="topbar">
+      <div class="topbar-left">
+        <button id="btn-quit" class="btn btn-ghost" type="button" aria-label="Quitter la session">← Quitter</button>
+        <span class="player-tag" id="player-tag">Joueur</span>
+      </div>
+      <div class="topbar-center">
+        <div class="metric">
+          <span class="metric-label">Score</span>
+          <span class="metric-value" id="score-val">0</span>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Question</span>
+          <span class="metric-value"><span id="q-current">1</span><span class="metric-sep">/</span><span id="q-total">10</span></span>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Série</span>
+          <span class="metric-value" id="streak-val">0</span>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="progress" aria-label="Progression de la session">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="game-main">
+      <div class="prompt-card" id="prompt-card">
+        <span class="prompt-kind" id="prompt-kind">Localisation</span>
+        <h2 class="prompt-text" id="prompt-text">…</h2>
+        <p class="prompt-hint" id="prompt-hint"></p>
+      </div>
+
+      <div id="map" class="map" aria-label="Carte interactive de Paris"></div>
+
+      <!-- Sélecteur de lignes (mode association) -->
+      <div id="line-picker" class="line-picker" hidden>
+        <div class="line-picker-inner" id="line-picker-inner"></div>
+      </div>
+
+      <!-- Feedback bas d'écran -->
+      <div id="feedback" class="feedback" aria-live="polite"></div>
+    </main>
+  </section>
+
+  <!-- ========== ÉCRAN RÉSULTAT ========== -->
+  <section id="screen-result" class="screen">
+    <div class="result-wrap">
+      <h1 class="result-title">Session terminée</h1>
+      <p class="result-subtitle" id="result-subtitle">Bravo.</p>
+
+      <div class="result-stats">
+        <div class="stat-block">
+          <span class="stat-label">Score final</span>
+          <span class="stat-value" id="r-score">0</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-label">Précision</span>
+          <span class="stat-value" id="r-accuracy">0%</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-label">Meilleure série</span>
+          <span class="stat-value" id="r-streak">0</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-label">Niveau atteint</span>
+          <span class="stat-value" id="r-level">1</span>
+        </div>
+      </div>
+
+      <div class="result-weak">
+        <h3>Stations à retravailler</h3>
+        <ul id="r-weak" class="weak-list"></ul>
+      </div>
+
+      <div class="result-actions">
+        <button id="btn-replay" class="btn btn-primary" type="button">Rejouer une session</button>
+        <button id="btn-home" class="btn btn-ghost" type="button">Retour à l'accueil</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- App scripts (en ES modules pour la modularité) -->
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>
