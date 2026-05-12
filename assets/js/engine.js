@@ -96,56 +96,76 @@ export function buildSession({ stations, lines, difficulty = 'normal' }) {
 
 /**
  * Évalue la réponse à la question courante.
- * - payload pour LOCATE : { lat, lon } cliqués
- * - payload pour ASSOCIATE : { lineId }
+ * - payload pour LOCATE     : { stationId } cliqué
+ * - payload pour ASSOCIATE  : { lineId }
  *
- * Retourne { isCorrect, distanceMeters?, correctLines?, scoreDelta }
+ * Logique des tentatives :
+ *  - 1ère tentative correcte  → score plein
+ *  - 1ère tentative fausse    → on passe en "2e tentative" (indice de zone côté UI),
+ *                                la fonction renvoie outcome='retry' et n'avance pas.
+ *  - 2e tentative correcte    → score réduit (50 %)
+ *  - 2e tentative fausse      → outcome='fail', on passe à la suivante.
+ *
+ * Retourne {
+ *   outcome: 'correct'|'retry'|'fail',
+ *   isCorrect: boolean (idem que outcome === 'correct'),
+ *   correctStationId, correctLines, scoreDelta, question, attempt
+ * }
  */
 export function evaluate(session, payload) {
   const q = session.questions[session.index];
   const st = q.station;
-  let isCorrect = false;
-  let distanceMeters = null;
+  session.attempt = (session.attempt || 0) + 1;
 
+  let isCorrect = false;
   if (q.kind === QUESTION_KINDS.LOCATE) {
-    distanceMeters = haversine(st.lat, st.lon, payload.lat, payload.lon);
-    // Tolérance : 120 m en normal, 180 m en easy, 80 m en hard
-    const tol = session.difficulty === 'easy' ? 180
-              : session.difficulty === 'hard' ? 80
-              : 120;
-    isCorrect = distanceMeters <= tol;
+    isCorrect = payload.stationId === st.id;
   } else {
     isCorrect = st.lines.includes(payload.lineId);
   }
 
-  // Score : base * facteur série, malus si erreur
+  let outcome;
   let scoreDelta = 0;
+
   if (isCorrect) {
+    outcome = 'correct';
     const streakBonus = 1 + Math.min(session.streak, 5) * 0.1;
-    scoreDelta = Math.round(session.cfg.scoreBase * streakBonus);
+    // 2e tentative : score divisé par 2 et série non incrémentée
+    if (session.attempt === 1) {
+      scoreDelta = Math.round(session.cfg.scoreBase * streakBonus);
+      session.streak += 1;
+      session.bestStreak = Math.max(session.bestStreak, session.streak);
+    } else {
+      scoreDelta = Math.round(session.cfg.scoreBase * 0.5);
+      session.streak = 0;
+    }
     session.score += scoreDelta;
-    session.streak += 1;
-    session.bestStreak = Math.max(session.bestStreak, session.streak);
     session.correctCount += 1;
-  } else {
+    Storage.recordAnswer(st.id, true);
+  } else if (session.attempt === 1) {
+    // Une seconde chance avec indice de zone
+    outcome = 'retry';
     session.streak = 0;
+  } else {
+    outcome = 'fail';
     session.wrongStationIds.add(st.id);
+    Storage.recordAnswer(st.id, false);
   }
 
-  // Persistance maîtrise
-  Storage.recordAnswer(st.id, isCorrect);
-
   return {
+    outcome,
     isCorrect,
-    distanceMeters,
+    correctStationId: st.id,
     correctLines: st.lines,
     scoreDelta,
     question: q,
+    attempt: session.attempt,
   };
 }
 
 export function advance(session) {
   session.index += 1;
+  session.attempt = 0;
   return session.index >= session.questions.length;
 }
 
