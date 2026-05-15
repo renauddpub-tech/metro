@@ -6,7 +6,8 @@
     "lon": 2.33795,
     "lines": [
       "12"
-    ]
+    ],
+    "arrondissement": 18
   },
   {
     "id": "st-002",
@@ -15,7 +16,8 @@
     "lon": 2.394676,
     "lines": [
       "2"
-    ]
+    ],
+    "arrondissement": 20
   },
   {
     "id": "st-003",
@@ -24,7 +26,8 @@
     "lon": 2.300991,
     "lines": [
       "9"
-    ]
+    ],
+    "arrondissement": 8
   },
   {
     "id": "st-004",
@@ -33,7 +36,8 @@
     "lon": 2.327165,
     "lines": [
       "4"
-    ]
+    ],
+    "arrondissement": 14
   },
   {
     "id": "st-005",
@@ -42,7 +46,10 @@
     "lon": 2.28501,
     "lines": [
       "3"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Levallois-Perret",
+    "code_insee": "92044"
   },
   {
     "id": "st-006",
@@ -51,7 +58,8 @@
     "lon": 2.344667,
     "lines": [
       "2"
-    ]
+    ],
+    "arrondissement": 9
   },
   {
     "id": "st-007",
@@ -60,7 +68,8 @@
     "lon": 2.290128,
     "lines": [
       "1"
-    ]
+    ],
+    "arrondissement": 16
   },
   {
     "id": "st-008",
@@ -70,7 +79,8 @@
     "lines": [
       "3",
       "11"
-    ]
+    ],
+    "arrondissement": 3
   },
   {
     "id": "st-009",
@@ -79,7 +89,8 @@
     "lon": 2.320998,
     "lines": [
       "12"
-    ]
+    ],
+    "arrondissement": 7
   },
   {
     "id": "st-010",
@@ -88,7 +99,10 @@
     "lon": 2.392221,
     "lines": [
       "7"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Pantin",
+    "code_insee": "93055"
   },
   {
     "id": "st-011",
@@ -97,7 +111,8 @@
     "lon": 2.295019,
     "lines": [
       "10"
-    ]
+    ],
+    "arrondissement": 15
   },
   {
     "id": "st-012",
@@ -106,7 +121,8 @@
     "lon": 2.397997,
     "lines": [
       "2"
-    ]
+    ],
+    "arrondissement": 20
   },
   {
     "id": "st-013",
@@ -115,7 +131,8 @@
     "lon": 2.27833,
     "lines": [
       "8"
-    ]
+    ],
+    "arrondissement": 15
   },
   {
     "id": "st-014",
@@ -125,7 +142,8 @@
     "lines": [
       "2",
       "4"
-    ]
+    ],
+    "arrondissement": 10
   },
   {
     "id": "st-015",
@@ -136,7 +154,8 @@
       "1",
       "5",
       "8"
-    ]
+    ],
+    "arrondissement": 4
   },
   {
     "id": "st-016",
@@ -145,7 +164,8 @@
     "lon": 2.400919,
     "lines": [
       "6"
-    ]
+    ],
+    "arrondissement": 12
   },
   {
     "id": "st-017",
@@ -155,7 +175,8 @@
     "lines": [
       "2",
       "11"
-    ]
+    ],
+    "arrondissement": 10
   },
   {
     "id": "st-018",
@@ -165,7 +186,8 @@
     "lines": [
       "6",
       "14"
-    ]
+    ],
+    "arrondissement": 12
   },
   {
     "id": "st-019",
@@ -174,7 +196,8 @@
     "lon": 2.375748,
     "lines": [
       "14"
-    ]
+    ],
+    "arrondissement": 13
   },
   {
     "id": "st-020",
@@ -183,7 +206,10 @@
     "lon": 2.237437,
     "lines": [
       "9"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Boulogne-Billancourt",
+    "code_insee": "92012"
   },
   {
     "id": "st-021",
@@ -192,7 +218,8 @@
     "lon": 2.289335,
     "lines": [
       "6"
-    ]
+    ],
+    "arrondissement": 15
   },
   {
     "id": "st-022",
@@ -201,7 +228,8 @@
     "lon": 2.33338,
     "lines": [
       "2"
-    ]
+    ],
+    "arrondissement": 9
   },
   {
     "id": "st-023",
@@ -210,7 +238,10 @@
     "lon": 2.425327,
     "lines": [
       "5"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Pantin",
+    "code_insee": "93055"
   },
   {
     "id": "st-024",
@@ -219,7 +250,8 @@
     "lon": 2.290059,
     "lines": [
       "6"
-    ]
+    ],
+    "arrondissement": 16
   },
   {
     "id": "st-025",
@@ -228,7 +260,8 @@
     "lon": 2.374496,
     "lines": [
       "7bis"
-    ]
+    ],
+    "arrondissement": 19
   },
   {
     "id": "st-026",
@@ -238,7 +271,8 @@
     "lines": [
       "8",
       "9"
-    ]
+    ],
+    "arrondissement": 10
   },
   {
     "id": "st-027",
@@ -247,7 +281,8 @@
     "lon": 2.388567,
     "lines": [
       "7bis"
-    ]
+    ],
+    "arrondissement": 19
   },
   {
     "id": "st-028",
@@ -256,7 +291,8 @@
     "lon": 2.287946,
     "lines": [
       "8"
-    ]
+    ],
+    "arrondissement": 15
   },
   {
     "id": "st-029",
@@ -265,7 +301,10 @@
     "lon": 2.238887,
     "lines": [
       "10"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Boulogne-Billancourt",
+    "code_insee": "92012"
   },
   {
     "id": "st-030",
@@ -274,7 +313,10 @@
     "lon": 2.228537,
     "lines": [
       "10"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Boulogne-Billancourt",
+    "code_insee": "92012"
   },
   {
     "id": "st-031",
@@ -283,7 +325,8 @@
     "lon": 2.341376,
     "lines": [
       "3"
-    ]
+    ],
+    "arrondissement": 2
   },
   {
     "id": "st-032",
@@ -292,7 +335,8 @@
     "lon": 2.320175,
     "lines": [
       "13"
-    ]
+    ],
+    "arrondissement": 17
   },
   {
     "id": "st-033",
@@ -301,7 +345,8 @@
     "lon": 2.370209,
     "lines": [
       "5"
-    ]
+    ],
+    "arrondissement": 11
   },
   {
     "id": "st-034",
@@ -310,7 +355,8 @@
     "lon": 2.381615,
     "lines": [
       "7bis"
-    ]
+    ],
+    "arrondissement": 19
   },
   {
     "id": "st-035",
@@ -319,7 +365,8 @@
     "lon": 2.401927,
     "lines": [
       "9"
-    ]
+    ],
+    "arrondissement": 20
   },
   {
     "id": "st-036",
@@ -328,7 +375,10 @@
     "lon": 2.429205,
     "lines": [
       "1"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Vincennes",
+    "code_insee": "94080"
   },
   {
     "id": "st-037",
@@ -337,7 +387,8 @@
     "lon": 2.344572,
     "lines": [
       "7"
-    ]
+    ],
+    "arrondissement": 9
   },
   {
     "id": "st-038",
@@ -346,7 +397,8 @@
     "lon": 2.302968,
     "lines": [
       "6"
-    ]
+    ],
+    "arrondissement": 15
   },
   {
     "id": "st-039",
@@ -355,7 +407,8 @@
     "lon": 2.358566,
     "lines": [
       "5"
-    ]
+    ],
+    "arrondissement": 13
   },
   {
     "id": "st-040",
@@ -364,7 +417,8 @@
     "lon": 2.351623,
     "lines": [
       "10"
-    ]
+    ],
+    "arrondissement": 5
   },
   {
     "id": "st-041",
@@ -373,7 +427,8 @@
     "lon": 2.351606,
     "lines": [
       "7"
-    ]
+    ],
+    "arrondissement": 5
   },
   {
     "id": "st-042",
@@ -383,7 +438,8 @@
     "lines": [
       "1",
       "13"
-    ]
+    ],
+    "arrondissement": 8
   },
   {
     "id": "st-043",
@@ -392,7 +448,8 @@
     "lon": 2.266442,
     "lines": [
       "10"
-    ]
+    ],
+    "arrondissement": 16
   },
   {
     "id": "st-044",
@@ -401,7 +458,10 @@
     "lon": 2.413133,
     "lines": [
       "8"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Charenton-le-Pont",
+    "code_insee": "94018"
   },
   {
     "id": "st-045",
@@ -412,7 +472,8 @@
       "1",
       "2",
       "6"
-    ]
+    ],
+    "arrondissement": 17
   },
   {
     "id": "st-046",
@@ -421,7 +482,8 @@
     "lon": 2.285999,
     "lines": [
       "10"
-    ]
+    ],
+    "arrondissement": 15
   },
   {
     "id": "st-047",
@@ -430,7 +492,8 @@
     "lon": 2.3847,
     "lines": [
       "9"
-    ]
+    ],
+    "arrondissement": 11
   },
   {
     "id": "st-048",
@@ -440,7 +503,8 @@
     "lines": [
       "7",
       "9"
-    ]
+    ],
+    "arrondissement": 9
   },
   {
     "id": "st-049",
@@ -449,7 +513,8 @@
     "lon": 2.368184,
     "lines": [
       "8"
-    ]
+    ],
+    "arrondissement": 3
   },
   {
     "id": "st-050",
@@ -458,7 +523,8 @@
     "lon": 2.368126,
     "lines": [
       "6"
-    ]
+    ],
+    "arrondissement": 13
   },
   {
     "id": "st-051",
@@ -467,7 +533,8 @@
     "lon": 2.349559,
     "lines": [
       "4"
-    ]
+    ],
+    "arrondissement": 18
   },
   {
     "id": "st-052",
@@ -476,7 +543,8 @@
     "lon": 2.356154,
     "lines": [
       "4"
-    ]
+    ],
+    "arrondissement": 10
   },
   {
     "id": "st-053",
@@ -485,7 +553,10 @@
     "lon": 2.44044,
     "lines": [
       "1"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Vincennes",
+    "code_insee": "94080"
   },
   {
     "id": "st-054",
@@ -494,7 +565,8 @@
     "lon": 2.361965,
     "lines": [
       "7"
-    ]
+    ],
+    "arrondissement": 10
   },
   {
     "id": "st-055",
@@ -507,7 +579,8 @@
       "7",
       "11",
       "14"
-    ]
+    ],
+    "arrondissement": 1
   },
   {
     "id": "st-056",
@@ -516,7 +589,8 @@
     "lon": 2.347321,
     "lines": [
       "4"
-    ]
+    ],
+    "arrondissement": 4
   },
   {
     "id": "st-057",
@@ -525,7 +599,8 @@
     "lon": 2.344273,
     "lines": [
       "10"
-    ]
+    ],
+    "arrondissement": 5
   },
   {
     "id": "st-058",
@@ -534,7 +609,8 @@
     "lon": 2.370811,
     "lines": [
       "2"
-    ]
+    ],
+    "arrondissement": 19
   },
   {
     "id": "st-059",
@@ -543,7 +619,8 @@
     "lon": 2.293952,
     "lines": [
       "8"
-    ]
+    ],
+    "arrondissement": 15
   },
   {
     "id": "st-060",
@@ -554,7 +631,8 @@
       "1",
       "8",
       "12"
-    ]
+    ],
+    "arrondissement": 8
   },
   {
     "id": "st-061",
@@ -563,7 +641,8 @@
     "lon": 2.296231,
     "lines": [
       "12"
-    ]
+    ],
+    "arrondissement": 15
   },
   {
     "id": "st-062",
@@ -572,7 +651,8 @@
     "lon": 2.38216,
     "lines": [
       "7"
-    ]
+    ],
+    "arrondissement": 19
   },
   {
     "id": "st-063",
@@ -581,7 +661,10 @@
     "lon": 2.279412,
     "lines": [
       "12"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Issy-les-Moulineaux",
+    "code_insee": "92040"
   },
   {
     "id": "st-064",
@@ -590,7 +673,8 @@
     "lon": 2.350415,
     "lines": [
       "6"
-    ]
+    ],
+    "arrondissement": 13
   },
   {
     "id": "st-065",
@@ -599,7 +683,10 @@
     "lon": 2.467356,
     "lines": [
       "11"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Rosny-sous-Bois",
+    "code_insee": "93064"
   },
   {
     "id": "st-066",
@@ -608,7 +695,8 @@
     "lon": 2.386632,
     "lines": [
       "14"
-    ]
+    ],
+    "arrondissement": 12
   },
   {
     "id": "st-067",
@@ -617,7 +705,8 @@
     "lon": 2.30407,
     "lines": [
       "2"
-    ]
+    ],
+    "arrondissement": 8
   },
   {
     "id": "st-068",
@@ -626,7 +715,8 @@
     "lon": 2.380543,
     "lines": [
       "2"
-    ]
+    ],
+    "arrondissement": 20
   },
   {
     "id": "st-069",
@@ -635,7 +725,8 @@
     "lon": 2.37709,
     "lines": [
       "7"
-    ]
+    ],
+    "arrondissement": 19
   },
   {
     "id": "st-070",
@@ -644,7 +735,10 @@
     "lon": 2.434538,
     "lines": [
       "9"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Montreuil",
+    "code_insee": "93048"
   },
   {
     "id": "st-071",
@@ -653,7 +747,8 @@
     "lon": 2.394012,
     "lines": [
       "7bis"
-    ]
+    ],
+    "arrondissement": 19
   },
   {
     "id": "st-072",
@@ -663,7 +758,8 @@
     "lines": [
       "6",
       "8"
-    ]
+    ],
+    "arrondissement": 12
   },
   {
     "id": "st-073",
@@ -673,7 +769,8 @@
     "lines": [
       "4",
       "6"
-    ]
+    ],
+    "arrondissement": 14
   },
   {
     "id": "st-074",
@@ -682,7 +779,8 @@
     "lon": 2.38962,
     "lines": [
       "6"
-    ]
+    ],
+    "arrondissement": 12
   },
   {
     "id": "st-075",
@@ -691,7 +789,8 @@
     "lon": 2.293612,
     "lines": [
       "6"
-    ]
+    ],
+    "arrondissement": 15
   },
   {
     "id": "st-076",
@@ -701,7 +800,8 @@
     "lines": [
       "10",
       "13"
-    ]
+    ],
+    "arrondissement": 7
   },
   {
     "id": "st-077",
@@ -710,7 +810,8 @@
     "lon": 2.326385,
     "lines": [
       "6"
-    ]
+    ],
+    "arrondissement": 14
   },
   {
     "id": "st-078",
@@ -719,7 +820,10 @@
     "lon": 2.249793,
     "lines": [
       "1"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Puteaux",
+    "code_insee": "92062"
   },
   {
     "id": "st-079",
@@ -728,7 +832,8 @@
     "lon": 2.322265,
     "lines": [
       "3"
-    ]
+    ],
+    "arrondissement": 8
   },
   {
     "id": "st-080",
@@ -737,7 +842,8 @@
     "lon": 2.259608,
     "lines": [
       "9"
-    ]
+    ],
+    "arrondissement": 16
   },
   {
     "id": "st-081",
@@ -746,7 +852,8 @@
     "lon": 2.384092,
     "lines": [
       "8"
-    ]
+    ],
+    "arrondissement": 11
   },
   {
     "id": "st-082",
@@ -755,7 +862,8 @@
     "lon": 2.317853,
     "lines": [
       "12"
-    ]
+    ],
+    "arrondissement": 15
   },
   {
     "id": "st-083",
@@ -764,7 +872,8 @@
     "lon": 2.366661,
     "lines": [
       "8"
-    ]
+    ],
+    "arrondissement": 11
   },
   {
     "id": "st-084",
@@ -774,7 +883,8 @@
     "lines": [
       "1",
       "9"
-    ]
+    ],
+    "arrondissement": 8
   },
   {
     "id": "st-085",
@@ -783,7 +893,8 @@
     "lon": 2.291912,
     "lines": [
       "8"
-    ]
+    ],
+    "arrondissement": 15
   },
   {
     "id": "st-086",
@@ -792,7 +903,10 @@
     "lon": 2.416697,
     "lines": [
       "3"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Bagnolet",
+    "code_insee": "93006"
   },
   {
     "id": "st-087",
@@ -801,7 +915,8 @@
     "lon": 2.396913,
     "lines": [
       "3"
-    ]
+    ],
+    "arrondissement": 20
   },
   {
     "id": "st-088",
@@ -811,7 +926,8 @@
     "lines": [
       "5",
       "10"
-    ]
+    ],
+    "arrondissement": 13
   },
   {
     "id": "st-089",
@@ -821,7 +937,8 @@
     "lines": [
       "1",
       "14"
-    ]
+    ],
+    "arrondissement": 12
   },
   {
     "id": "st-090",
@@ -832,7 +949,8 @@
       "4",
       "5",
       "7"
-    ]
+    ],
+    "arrondissement": 10
   },
   {
     "id": "st-091",
@@ -842,7 +960,8 @@
     "lines": [
       "4",
       "5"
-    ]
+    ],
+    "arrondissement": 10
   },
   {
     "id": "st-092",
@@ -851,7 +970,8 @@
     "lon": 2.322492,
     "lines": [
       "13"
-    ]
+    ],
+    "arrondissement": 14
   },
   {
     "id": "st-093",
@@ -860,7 +980,8 @@
     "lon": 2.30056,
     "lines": [
       "1"
-    ]
+    ],
+    "arrondissement": 8
   },
   {
     "id": "st-094",
@@ -869,7 +990,8 @@
     "lon": 2.343512,
     "lines": [
       "6"
-    ]
+    ],
+    "arrondissement": 13
   },
   {
     "id": "st-095",
@@ -878,7 +1000,8 @@
     "lon": 2.371095,
     "lines": [
       "11"
-    ]
+    ],
+    "arrondissement": 11
   },
   {
     "id": "st-096",
@@ -888,7 +1011,8 @@
     "lines": [
       "8",
       "9"
-    ]
+    ],
+    "arrondissement": 9
   },
   {
     "id": "st-097",
@@ -897,7 +1021,8 @@
     "lon": 2.32722,
     "lines": [
       "13"
-    ]
+    ],
+    "arrondissement": 18
   },
   {
     "id": "st-098",
@@ -907,7 +1032,8 @@
     "lines": [
       "3",
       "9"
-    ]
+    ],
+    "arrondissement": 9
   },
   {
     "id": "st-099",
@@ -916,7 +1042,10 @@
     "lon": 2.402352,
     "lines": [
       "5"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Pantin",
+    "code_insee": "93055"
   },
   {
     "id": "st-100",
@@ -926,7 +1055,8 @@
     "lines": [
       "1",
       "11"
-    ]
+    ],
+    "arrondissement": 4
   },
   {
     "id": "st-101",
@@ -936,7 +1066,8 @@
     "lines": [
       "8",
       "13"
-    ]
+    ],
+    "arrondissement": 7
   },
   {
     "id": "st-102",
@@ -945,7 +1076,8 @@
     "lon": 2.294162,
     "lines": [
       "9"
-    ]
+    ],
+    "arrondissement": 16
   },
   {
     "id": "st-103",
@@ -954,7 +1086,8 @@
     "lon": 2.3614,
     "lines": [
       "5"
-    ]
+    ],
+    "arrondissement": 10
   },
   {
     "id": "st-104",
@@ -963,7 +1096,8 @@
     "lon": 2.268177,
     "lines": [
       "9"
-    ]
+    ],
+    "arrondissement": 16
   },
   {
     "id": "st-105",
@@ -974,7 +1108,8 @@
       "2",
       "5",
       "7bis"
-    ]
+    ],
+    "arrondissement": 19
   },
   {
     "id": "st-106",
@@ -983,7 +1118,8 @@
     "lon": 2.2784,
     "lines": [
       "10"
-    ]
+    ],
+    "arrondissement": 15
   },
   {
     "id": "st-107",
@@ -992,7 +1128,8 @@
     "lon": 2.389415,
     "lines": [
       "11"
-    ]
+    ],
+    "arrondissement": 20
   },
   {
     "id": "st-108",
@@ -1001,7 +1138,8 @@
     "lon": 2.344765,
     "lines": [
       "12"
-    ]
+    ],
+    "arrondissement": 18
   },
   {
     "id": "st-109",
@@ -1011,7 +1149,8 @@
     "lines": [
       "7",
       "10"
-    ]
+    ],
+    "arrondissement": 5
   },
   {
     "id": "st-110",
@@ -1020,7 +1159,8 @@
     "lon": 2.293241,
     "lines": [
       "6"
-    ]
+    ],
+    "arrondissement": 16
   },
   {
     "id": "st-111",
@@ -1029,7 +1169,8 @@
     "lon": 2.3604,
     "lines": [
       "2"
-    ]
+    ],
+    "arrondissement": 10
   },
   {
     "id": "st-112",
@@ -1038,7 +1179,10 @@
     "lon": 2.465472,
     "lines": [
       "11"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Rosny-sous-Bois",
+    "code_insee": "93064"
   },
   {
     "id": "st-113",
@@ -1047,7 +1191,10 @@
     "lon": 2.237018,
     "lines": [
       "1"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Puteaux",
+    "code_insee": "92062"
   },
   {
     "id": "st-114",
@@ -1056,7 +1203,8 @@
     "lon": 2.32578,
     "lines": [
       "13"
-    ]
+    ],
+    "arrondissement": 18
   },
   {
     "id": "st-115",
@@ -1067,7 +1215,8 @@
       "6",
       "8",
       "10"
-    ]
+    ],
+    "arrondissement": 15
   },
   {
     "id": "st-116",
@@ -1076,7 +1225,8 @@
     "lon": 2.274155,
     "lines": [
       "9"
-    ]
+    ],
+    "arrondissement": 16
   },
   {
     "id": "st-117",
@@ -1085,7 +1235,8 @@
     "lon": 2.310566,
     "lines": [
       "8"
-    ]
+    ],
+    "arrondissement": 7
   },
   {
     "id": "st-118",
@@ -1094,7 +1245,8 @@
     "lon": 2.338761,
     "lines": [
       "12"
-    ]
+    ],
+    "arrondissement": 18
   },
   {
     "id": "st-119",
@@ -1103,7 +1255,8 @@
     "lon": 2.378717,
     "lines": [
       "5"
-    ]
+    ],
+    "arrondissement": 19
   },
   {
     "id": "st-120",
@@ -1112,7 +1265,8 @@
     "lon": 2.340576,
     "lines": [
       "7"
-    ]
+    ],
+    "arrondissement": 9
   },
   {
     "id": "st-121",
@@ -1121,7 +1275,8 @@
     "lon": 2.375101,
     "lines": [
       "8"
-    ]
+    ],
+    "arrondissement": 12
   },
   {
     "id": "st-122",
@@ -1130,7 +1285,8 @@
     "lon": 2.352542,
     "lines": [
       "7"
-    ]
+    ],
+    "arrondissement": 13
   },
   {
     "id": "st-123",
@@ -1139,7 +1295,8 @@
     "lon": 2.345786,
     "lines": [
       "4"
-    ]
+    ],
+    "arrondissement": 1
   },
   {
     "id": "st-124",
@@ -1148,7 +1305,10 @@
     "lon": 2.272239,
     "lines": [
       "1"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Neuilly-sur-Seine",
+    "code_insee": "92051"
   },
   {
     "id": "st-125",
@@ -1157,7 +1317,10 @@
     "lon": 2.405852,
     "lines": [
       "8"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Charenton-le-Pont",
+    "code_insee": "94018"
   },
   {
     "id": "st-126",
@@ -1166,7 +1329,8 @@
     "lon": 2.327022,
     "lines": [
       "13"
-    ]
+    ],
+    "arrondissement": 9
   },
   {
     "id": "st-127",
@@ -1176,7 +1340,8 @@
     "lines": [
       "7",
       "7bis"
-    ]
+    ],
+    "arrondissement": 10
   },
   {
     "id": "st-128",
@@ -1185,7 +1350,10 @@
     "lon": 2.288084,
     "lines": [
       "3"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Levallois-Perret",
+    "code_insee": "92044"
   },
   {
     "id": "st-129",
@@ -1194,7 +1362,8 @@
     "lon": 2.282143,
     "lines": [
       "8"
-    ]
+    ],
+    "arrondissement": 15
   },
   {
     "id": "st-130",
@@ -1203,7 +1372,8 @@
     "lon": 2.341109,
     "lines": [
       "1"
-    ]
+    ],
+    "arrondissement": 1
   },
   {
     "id": "st-131",
@@ -1212,7 +1382,8 @@
     "lon": 2.335502,
     "lines": [
       "10"
-    ]
+    ],
+    "arrondissement": 6
   },
   {
     "id": "st-132",
@@ -1223,7 +1394,8 @@
       "8",
       "12",
       "14"
-    ]
+    ],
+    "arrondissement": 8
   },
   {
     "id": "st-133",
@@ -1232,7 +1404,10 @@
     "lon": 2.273666,
     "lines": [
       "12"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Issy-les-Moulineaux",
+    "code_insee": "92040"
   },
   {
     "id": "st-134",
@@ -1241,7 +1416,10 @@
     "lon": 2.306011,
     "lines": [
       "13"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Clichy",
+    "code_insee": "92024"
   },
   {
     "id": "st-135",
@@ -1250,7 +1428,10 @@
     "lon": 2.441522,
     "lines": [
       "9"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Montreuil",
+    "code_insee": "93048"
   },
   {
     "id": "st-136",
@@ -1259,7 +1440,10 @@
     "lon": 2.31974,
     "lines": [
       "4"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Montrouge",
+    "code_insee": "92049"
   },
   {
     "id": "st-137",
@@ -1268,7 +1452,10 @@
     "lon": 2.41648,
     "lines": [
       "11"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Les Lilas",
+    "code_insee": "93045"
   },
   {
     "id": "st-138",
@@ -1278,7 +1465,8 @@
     "lines": [
       "7",
       "14"
-    ]
+    ],
+    "arrondissement": 13
   },
   {
     "id": "st-139",
@@ -1287,7 +1475,10 @@
     "lon": 2.298464,
     "lines": [
       "13"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Malakoff",
+    "code_insee": "92046"
   },
   {
     "id": "st-140",
@@ -1296,7 +1487,10 @@
     "lon": 2.297078,
     "lines": [
       "13"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Malakoff",
+    "code_insee": "92046"
   },
   {
     "id": "st-141",
@@ -1305,7 +1499,8 @@
     "lon": 2.309052,
     "lines": [
       "3"
-    ]
+    ],
+    "arrondissement": 17
   },
   {
     "id": "st-142",
@@ -1314,7 +1509,8 @@
     "lon": 2.406089,
     "lines": [
       "9"
-    ]
+    ],
+    "arrondissement": 20
   },
   {
     "id": "st-143",
@@ -1324,7 +1520,8 @@
     "lines": [
       "4",
       "12"
-    ]
+    ],
+    "arrondissement": 18
   },
   {
     "id": "st-144",
@@ -1333,7 +1530,10 @@
     "lon": 2.243579,
     "lines": [
       "9"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Boulogne-Billancourt",
+    "code_insee": "92012"
   },
   {
     "id": "st-145",
@@ -1342,7 +1542,8 @@
     "lon": 2.359996,
     "lines": [
       "12"
-    ]
+    ],
+    "arrondissement": 18
   },
   {
     "id": "st-146",
@@ -1351,7 +1552,8 @@
     "lon": 2.348209,
     "lines": [
       "10"
-    ]
+    ],
+    "arrondissement": 5
   },
   {
     "id": "st-147",
@@ -1361,7 +1563,8 @@
     "lines": [
       "9",
       "10"
-    ]
+    ],
+    "arrondissement": 16
   },
   {
     "id": "st-148",
@@ -1371,7 +1574,8 @@
     "lines": [
       "9",
       "10"
-    ]
+    ],
+    "arrondissement": 16
   },
   {
     "id": "st-149",
@@ -1380,7 +1584,8 @@
     "lon": 2.402333,
     "lines": [
       "8"
-    ]
+    ],
+    "arrondissement": 12
   },
   {
     "id": "st-150",
@@ -1389,7 +1594,8 @@
     "lon": 2.272764,
     "lines": [
       "10"
-    ]
+    ],
+    "arrondissement": 16
   },
   {
     "id": "st-151",
@@ -1399,7 +1605,8 @@
     "lines": [
       "9",
       "13"
-    ]
+    ],
+    "arrondissement": 8
   },
   {
     "id": "st-152",
@@ -1408,7 +1615,8 @@
     "lon": 2.308774,
     "lines": [
       "2"
-    ]
+    ],
+    "arrondissement": 8
   },
   {
     "id": "st-153",
@@ -1417,7 +1625,8 @@
     "lon": 2.390482,
     "lines": [
       "8"
-    ]
+    ],
+    "arrondissement": 12
   },
   {
     "id": "st-154",
@@ -1426,7 +1635,8 @@
     "lon": 2.324353,
     "lines": [
       "12"
-    ]
+    ],
+    "arrondissement": 15
   },
   {
     "id": "st-155",
@@ -1437,7 +1647,8 @@
       "4",
       "6",
       "13"
-    ]
+    ],
+    "arrondissement": 15
   },
   {
     "id": "st-156",
@@ -1446,7 +1657,10 @@
     "lon": 2.454714,
     "lines": [
       "11"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Noisy-le-Sec",
+    "code_insee": "93053"
   },
   {
     "id": "st-157",
@@ -1455,7 +1669,8 @@
     "lon": 2.329705,
     "lines": [
       "4"
-    ]
+    ],
+    "arrondissement": 14
   },
   {
     "id": "st-158",
@@ -1464,7 +1679,8 @@
     "lon": 2.383599,
     "lines": [
       "2"
-    ]
+    ],
+    "arrondissement": 20
   },
   {
     "id": "st-159",
@@ -1476,7 +1692,8 @@
       "2",
       "6",
       "9"
-    ]
+    ],
+    "arrondissement": 12
   },
   {
     "id": "st-160",
@@ -1485,7 +1702,8 @@
     "lon": 2.362856,
     "lines": [
       "6"
-    ]
+    ],
+    "arrondissement": 13
   },
   {
     "id": "st-161",
@@ -1494,7 +1712,8 @@
     "lon": 2.337496,
     "lines": [
       "12"
-    ]
+    ],
+    "arrondissement": 9
   },
   {
     "id": "st-162",
@@ -1503,7 +1722,8 @@
     "lon": 2.328778,
     "lines": [
       "12"
-    ]
+    ],
+    "arrondissement": 6
   },
   {
     "id": "st-163",
@@ -1513,7 +1733,8 @@
     "lines": [
       "5",
       "9"
-    ]
+    ],
+    "arrondissement": 11
   },
   {
     "id": "st-164",
@@ -1523,7 +1744,8 @@
     "lines": [
       "4",
       "10"
-    ]
+    ],
+    "arrondissement": 6
   },
   {
     "id": "st-165",
@@ -1532,7 +1754,8 @@
     "lon": 2.368033,
     "lines": [
       "14"
-    ]
+    ],
+    "arrondissement": 13
   },
   {
     "id": "st-166",
@@ -1543,7 +1766,8 @@
       "3",
       "7",
       "8"
-    ]
+    ],
+    "arrondissement": 9
   },
   {
     "id": "st-167",
@@ -1552,7 +1776,8 @@
     "lon": 2.385913,
     "lines": [
       "5"
-    ]
+    ],
+    "arrondissement": 19
   },
   {
     "id": "st-168",
@@ -1562,7 +1787,8 @@
     "lines": [
       "1",
       "7"
-    ]
+    ],
+    "arrondissement": 1
   },
   {
     "id": "st-169",
@@ -1571,7 +1797,8 @@
     "lon": 2.374582,
     "lines": [
       "3"
-    ]
+    ],
+    "arrondissement": 11
   },
   {
     "id": "st-170",
@@ -1580,7 +1807,8 @@
     "lon": 2.285812,
     "lines": [
       "6"
-    ]
+    ],
+    "arrondissement": 16
   },
   {
     "id": "st-171",
@@ -1590,7 +1818,8 @@
     "lines": [
       "6",
       "12"
-    ]
+    ],
+    "arrondissement": 15
   },
   {
     "id": "st-172",
@@ -1599,7 +1828,8 @@
     "lon": 2.297724,
     "lines": [
       "3"
-    ]
+    ],
+    "arrondissement": 17
   },
   {
     "id": "st-173",
@@ -1608,7 +1838,8 @@
     "lon": 2.318616,
     "lines": [
       "13"
-    ]
+    ],
+    "arrondissement": 14
   },
   {
     "id": "st-174",
@@ -1617,7 +1848,8 @@
     "lon": 2.390861,
     "lines": [
       "2"
-    ]
+    ],
+    "arrondissement": 11
   },
   {
     "id": "st-175",
@@ -1626,7 +1858,8 @@
     "lon": 2.401289,
     "lines": [
       "6"
-    ]
+    ],
+    "arrondissement": 12
   },
   {
     "id": "st-176",
@@ -1635,7 +1868,10 @@
     "lon": 2.377267,
     "lines": [
       "7"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Ivry-sur-Seine",
+    "code_insee": "94041"
   },
   {
     "id": "st-177",
@@ -1645,7 +1881,8 @@
     "lines": [
       "2",
       "12"
-    ]
+    ],
+    "arrondissement": 9
   },
   {
     "id": "st-178",
@@ -1654,7 +1891,8 @@
     "lon": 2.352225,
     "lines": [
       "7"
-    ]
+    ],
+    "arrondissement": 5
   },
   {
     "id": "st-179",
@@ -1665,7 +1903,8 @@
       "5",
       "6",
       "7"
-    ]
+    ],
+    "arrondissement": 13
   },
   {
     "id": "st-180",
@@ -1675,7 +1914,8 @@
     "lines": [
       "2",
       "13"
-    ]
+    ],
+    "arrondissement": 18
   },
   {
     "id": "st-181",
@@ -1685,7 +1925,8 @@
     "lines": [
       "11",
       "7bis"
-    ]
+    ],
+    "arrondissement": 19
   },
   {
     "id": "st-182",
@@ -1694,7 +1935,8 @@
     "lon": 2.314122,
     "lines": [
       "13"
-    ]
+    ],
+    "arrondissement": 14
   },
   {
     "id": "st-183",
@@ -1703,7 +1945,8 @@
     "lon": 2.348776,
     "lines": [
       "7"
-    ]
+    ],
+    "arrondissement": 9
   },
   {
     "id": "st-184",
@@ -1712,7 +1955,8 @@
     "lon": 2.315177,
     "lines": [
       "14"
-    ]
+    ],
+    "arrondissement": 17
   },
   {
     "id": "st-185",
@@ -1721,7 +1965,8 @@
     "lon": 2.357163,
     "lines": [
       "7"
-    ]
+    ],
+    "arrondissement": 4
   },
   {
     "id": "st-186",
@@ -1730,7 +1975,8 @@
     "lon": 2.342233,
     "lines": [
       "7"
-    ]
+    ],
+    "arrondissement": 1
   },
   {
     "id": "st-187",
@@ -1739,7 +1985,10 @@
     "lon": 2.280414,
     "lines": [
       "3"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Levallois-Perret",
+    "code_insee": "92044"
   },
   {
     "id": "st-188",
@@ -1748,7 +1997,10 @@
     "lon": 2.260515,
     "lines": [
       "1"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Neuilly-sur-Seine",
+    "code_insee": "92051"
   },
   {
     "id": "st-189",
@@ -1757,7 +2009,10 @@
     "lon": 2.231028,
     "lines": [
       "9"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Boulogne-Billancourt",
+    "code_insee": "92012"
   },
   {
     "id": "st-190",
@@ -1766,7 +2021,8 @@
     "lon": 2.277083,
     "lines": [
       "2"
-    ]
+    ],
+    "arrondissement": 16
   },
   {
     "id": "st-191",
@@ -1775,7 +2031,8 @@
     "lon": 2.405383,
     "lines": [
       "8"
-    ]
+    ],
+    "arrondissement": 12
   },
   {
     "id": "st-192",
@@ -1784,7 +2041,8 @@
     "lon": 2.283162,
     "lines": [
       "1"
-    ]
+    ],
+    "arrondissement": 16
   },
   {
     "id": "st-193",
@@ -1793,7 +2051,8 @@
     "lon": 2.257745,
     "lines": [
       "10"
-    ]
+    ],
+    "arrondissement": 16
   },
   {
     "id": "st-194",
@@ -1802,7 +2061,8 @@
     "lon": 2.359705,
     "lines": [
       "7"
-    ]
+    ],
+    "arrondissement": 13
   },
   {
     "id": "st-195",
@@ -1811,7 +2071,8 @@
     "lon": 2.369291,
     "lines": [
       "7"
-    ]
+    ],
+    "arrondissement": 13
   },
   {
     "id": "st-196",
@@ -1820,7 +2081,8 @@
     "lon": 2.325576,
     "lines": [
       "4"
-    ]
+    ],
+    "arrondissement": 14
   },
   {
     "id": "st-197",
@@ -1829,7 +2091,8 @@
     "lon": 2.408031,
     "lines": [
       "3"
-    ]
+    ],
+    "arrondissement": 20
   },
   {
     "id": "st-198",
@@ -1838,7 +2101,8 @@
     "lon": 2.29353,
     "lines": [
       "3"
-    ]
+    ],
+    "arrondissement": 17
   },
   {
     "id": "st-199",
@@ -1847,7 +2111,8 @@
     "lon": 2.40031,
     "lines": [
       "8"
-    ]
+    ],
+    "arrondissement": 12
   },
   {
     "id": "st-200",
@@ -1856,7 +2121,8 @@
     "lon": 2.364532,
     "lines": [
       "7"
-    ]
+    ],
+    "arrondissement": 13
   },
   {
     "id": "st-201",
@@ -1866,7 +2132,8 @@
     "lines": [
       "13",
       "14"
-    ]
+    ],
+    "arrondissement": 17
   },
   {
     "id": "st-202",
@@ -1875,7 +2142,8 @@
     "lon": 2.344848,
     "lines": [
       "4"
-    ]
+    ],
+    "arrondissement": 18
   },
   {
     "id": "st-203",
@@ -1884,7 +2152,8 @@
     "lon": 2.411895,
     "lines": [
       "9"
-    ]
+    ],
+    "arrondissement": 20
   },
   {
     "id": "st-204",
@@ -1893,7 +2162,8 @@
     "lon": 2.391784,
     "lines": [
       "5"
-    ]
+    ],
+    "arrondissement": 19
   },
   {
     "id": "st-205",
@@ -1902,7 +2172,8 @@
     "lon": 2.257122,
     "lines": [
       "9"
-    ]
+    ],
+    "arrondissement": 16
   },
   {
     "id": "st-206",
@@ -1911,7 +2182,8 @@
     "lon": 2.328943,
     "lines": [
       "13"
-    ]
+    ],
+    "arrondissement": 18
   },
   {
     "id": "st-207",
@@ -1920,7 +2192,8 @@
     "lon": 2.305535,
     "lines": [
       "13"
-    ]
+    ],
+    "arrondissement": 14
   },
   {
     "id": "st-208",
@@ -1929,7 +2202,8 @@
     "lon": 2.288022,
     "lines": [
       "12"
-    ]
+    ],
+    "arrondissement": 15
   },
   {
     "id": "st-209",
@@ -1938,7 +2212,8 @@
     "lon": 2.408089,
     "lines": [
       "1"
-    ]
+    ],
+    "arrondissement": 20
   },
   {
     "id": "st-210",
@@ -1947,7 +2222,8 @@
     "lon": 2.359508,
     "lines": [
       "12"
-    ]
+    ],
+    "arrondissement": 18
   },
   {
     "id": "st-211",
@@ -1956,7 +2232,8 @@
     "lon": 2.385508,
     "lines": [
       "7"
-    ]
+    ],
+    "arrondissement": 19
   },
   {
     "id": "st-212",
@@ -1965,7 +2242,8 @@
     "lon": 2.40648,
     "lines": [
       "11"
-    ]
+    ],
+    "arrondissement": 19
   },
   {
     "id": "st-213",
@@ -1974,7 +2252,8 @@
     "lon": 2.398468,
     "lines": [
       "7bis"
-    ]
+    ],
+    "arrondissement": 19
   },
   {
     "id": "st-214",
@@ -1984,7 +2263,8 @@
     "lines": [
       "7",
       "14"
-    ]
+    ],
+    "arrondissement": 1
   },
   {
     "id": "st-215",
@@ -1993,7 +2273,8 @@
     "lon": 2.385316,
     "lines": [
       "11"
-    ]
+    ],
+    "arrondissement": 20
   },
   {
     "id": "st-216",
@@ -2003,7 +2284,8 @@
     "lines": [
       "2",
       "3"
-    ]
+    ],
+    "arrondissement": 11
   },
   {
     "id": "st-217",
@@ -2012,7 +2294,8 @@
     "lon": 2.372826,
     "lines": [
       "6"
-    ]
+    ],
+    "arrondissement": 13
   },
   {
     "id": "st-218",
@@ -2021,7 +2304,8 @@
     "lon": 2.36591,
     "lines": [
       "5"
-    ]
+    ],
+    "arrondissement": 12
   },
   {
     "id": "st-219",
@@ -2030,7 +2314,8 @@
     "lon": 2.336233,
     "lines": [
       "3"
-    ]
+    ],
+    "arrondissement": 2
   },
   {
     "id": "st-220",
@@ -2039,7 +2324,8 @@
     "lon": 2.353496,
     "lines": [
       "11"
-    ]
+    ],
+    "arrondissement": 4
   },
   {
     "id": "st-221",
@@ -2048,7 +2334,8 @@
     "lon": 2.270109,
     "lines": [
       "9"
-    ]
+    ],
+    "arrondissement": 16
   },
   {
     "id": "st-222",
@@ -2058,7 +2345,8 @@
     "lines": [
       "4",
       "6"
-    ]
+    ],
+    "arrondissement": 14
   },
   {
     "id": "st-223",
@@ -2067,7 +2355,8 @@
     "lon": 2.327782,
     "lines": [
       "12"
-    ]
+    ],
+    "arrondissement": 6
   },
   {
     "id": "st-224",
@@ -2077,7 +2366,8 @@
     "lines": [
       "1",
       "8"
-    ]
+    ],
+    "arrondissement": 12
   },
   {
     "id": "st-225",
@@ -2086,7 +2376,8 @@
     "lon": 2.371914,
     "lines": [
       "5"
-    ]
+    ],
+    "arrondissement": 11
   },
   {
     "id": "st-226",
@@ -2096,7 +2387,8 @@
     "lines": [
       "8",
       "9"
-    ]
+    ],
+    "arrondissement": 9
   },
   {
     "id": "st-227",
@@ -2105,7 +2397,8 @@
     "lon": 2.373457,
     "lines": [
       "7"
-    ]
+    ],
+    "arrondissement": 19
   },
   {
     "id": "st-228",
@@ -2114,7 +2407,10 @@
     "lon": 2.422983,
     "lines": [
       "9"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Montreuil",
+    "code_insee": "93048"
   },
   {
     "id": "st-229",
@@ -2123,7 +2419,10 @@
     "lon": 2.440822,
     "lines": [
       "11"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Romainville",
+    "code_insee": "93063"
   },
   {
     "id": "st-230",
@@ -2132,7 +2431,8 @@
     "lon": 2.321802,
     "lines": [
       "2"
-    ]
+    ],
+    "arrondissement": 8
   },
   {
     "id": "st-231",
@@ -2141,7 +2441,8 @@
     "lon": 2.379742,
     "lines": [
       "3"
-    ]
+    ],
+    "arrondissement": 11
   },
   {
     "id": "st-232",
@@ -2150,7 +2451,8 @@
     "lon": 2.278442,
     "lines": [
       "9"
-    ]
+    ],
+    "arrondissement": 16
   },
   {
     "id": "st-233",
@@ -2159,7 +2461,8 @@
     "lon": 2.389626,
     "lines": [
       "9"
-    ]
+    ],
+    "arrondissement": 11
   },
   {
     "id": "st-234",
@@ -2168,7 +2471,8 @@
     "lon": 2.325816,
     "lines": [
       "12"
-    ]
+    ],
+    "arrondissement": 7
   },
   {
     "id": "st-235",
@@ -2178,7 +2482,8 @@
     "lines": [
       "3",
       "4"
-    ]
+    ],
+    "arrondissement": 2
   },
   {
     "id": "st-236",
@@ -2191,7 +2496,8 @@
       "8",
       "9",
       "11"
-    ]
+    ],
+    "arrondissement": 10
   },
   {
     "id": "st-237",
@@ -2200,7 +2506,8 @@
     "lon": 2.373944,
     "lines": [
       "9"
-    ]
+    ],
+    "arrondissement": 11
   },
   {
     "id": "st-238",
@@ -2209,7 +2516,8 @@
     "lon": 2.322002,
     "lines": [
       "9"
-    ]
+    ],
+    "arrondissement": 8
   },
   {
     "id": "st-239",
@@ -2218,7 +2526,8 @@
     "lon": 2.314408,
     "lines": [
       "13"
-    ]
+    ],
+    "arrondissement": 7
   },
   {
     "id": "st-240",
@@ -2227,7 +2536,8 @@
     "lon": 2.337858,
     "lines": [
       "12"
-    ]
+    ],
+    "arrondissement": 9
   },
   {
     "id": "st-241",
@@ -2236,7 +2546,8 @@
     "lon": 2.333776,
     "lines": [
       "4"
-    ]
+    ],
+    "arrondissement": 6
   },
   {
     "id": "st-242",
@@ -2245,7 +2556,8 @@
     "lon": 2.337135,
     "lines": [
       "6"
-    ]
+    ],
+    "arrondissement": 14
   },
   {
     "id": "st-243",
@@ -2257,7 +2569,8 @@
       "12",
       "13",
       "14"
-    ]
+    ],
+    "arrondissement": 8
   },
   {
     "id": "st-244",
@@ -2266,7 +2579,10 @@
     "lon": 2.41876,
     "lines": [
       "1"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Vincennes",
+    "code_insee": "94080"
   },
   {
     "id": "st-245",
@@ -2275,7 +2591,8 @@
     "lon": 2.360967,
     "lines": [
       "5"
-    ]
+    ],
+    "arrondissement": 13
   },
   {
     "id": "st-246",
@@ -2284,7 +2601,8 @@
     "lon": 2.343286,
     "lines": [
       "4"
-    ]
+    ],
+    "arrondissement": 6
   },
   {
     "id": "st-247",
@@ -2293,7 +2611,10 @@
     "lon": 2.321744,
     "lines": [
       "14"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Saint-Ouen-sur-Seine",
+    "code_insee": "93070"
   },
   {
     "id": "st-248",
@@ -2302,7 +2623,8 @@
     "lon": 2.360956,
     "lines": [
       "1"
-    ]
+    ],
+    "arrondissement": 4
   },
   {
     "id": "st-249",
@@ -2311,7 +2633,8 @@
     "lon": 2.310019,
     "lines": [
       "9"
-    ]
+    ],
+    "arrondissement": 8
   },
   {
     "id": "st-250",
@@ -2320,7 +2643,8 @@
     "lon": 2.326793,
     "lines": [
       "4"
-    ]
+    ],
+    "arrondissement": 6
   },
   {
     "id": "st-251",
@@ -2329,7 +2653,8 @@
     "lon": 2.330701,
     "lines": [
       "4"
-    ]
+    ],
+    "arrondissement": 6
   },
   {
     "id": "st-252",
@@ -2338,7 +2663,8 @@
     "lon": 2.367211,
     "lines": [
       "8"
-    ]
+    ],
+    "arrondissement": 3
   },
   {
     "id": "st-253",
@@ -2347,7 +2673,8 @@
     "lon": 2.346552,
     "lines": [
       "3"
-    ]
+    ],
+    "arrondissement": 2
   },
   {
     "id": "st-254",
@@ -2356,7 +2683,10 @@
     "lon": 2.427186,
     "lines": [
       "11"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Les Lilas",
+    "code_insee": "93045"
   },
   {
     "id": "st-255",
@@ -2365,7 +2695,8 @@
     "lon": 2.347431,
     "lines": [
       "4"
-    ]
+    ],
+    "arrondissement": 18
   },
   {
     "id": "st-256",
@@ -2374,7 +2705,8 @@
     "lon": 2.323168,
     "lines": [
       "12"
-    ]
+    ],
+    "arrondissement": 7
   },
   {
     "id": "st-257",
@@ -2385,7 +2717,8 @@
       "2",
       "5",
       "7"
-    ]
+    ],
+    "arrondissement": 19
   },
   {
     "id": "st-258",
@@ -2396,7 +2729,8 @@
       "4",
       "8",
       "9"
-    ]
+    ],
+    "arrondissement": 10
   },
   {
     "id": "st-259",
@@ -2405,7 +2739,8 @@
     "lon": 2.361525,
     "lines": [
       "7"
-    ]
+    ],
+    "arrondissement": 4
   },
   {
     "id": "st-260",
@@ -2415,7 +2750,8 @@
     "lines": [
       "10",
       "12"
-    ]
+    ],
+    "arrondissement": 7
   },
   {
     "id": "st-261",
@@ -2424,7 +2760,8 @@
     "lon": 2.309531,
     "lines": [
       "6"
-    ]
+    ],
+    "arrondissement": 15
   },
   {
     "id": "st-262",
@@ -2433,7 +2770,8 @@
     "lon": 2.307402,
     "lines": [
       "10"
-    ]
+    ],
+    "arrondissement": 15
   },
   {
     "id": "st-263",
@@ -2442,7 +2780,8 @@
     "lon": 2.360804,
     "lines": [
       "3"
-    ]
+    ],
+    "arrondissement": 3
   },
   {
     "id": "st-264",
@@ -2451,7 +2790,8 @@
     "lon": 2.29831,
     "lines": [
       "2"
-    ]
+    ],
+    "arrondissement": 8
   },
   {
     "id": "st-265",
@@ -2460,7 +2800,8 @@
     "lon": 2.357246,
     "lines": [
       "7"
-    ]
+    ],
+    "arrondissement": 13
   },
   {
     "id": "st-266",
@@ -2469,7 +2810,8 @@
     "lon": 2.333109,
     "lines": [
       "12"
-    ]
+    ],
+    "arrondissement": 9
   },
   {
     "id": "st-267",
@@ -2479,7 +2821,8 @@
     "lines": [
       "6",
       "9"
-    ]
+    ],
+    "arrondissement": 16
   },
   {
     "id": "st-268",
@@ -2488,7 +2831,8 @@
     "lon": 2.33013,
     "lines": [
       "1"
-    ]
+    ],
+    "arrondissement": 1
   },
   {
     "id": "st-269",
@@ -2497,7 +2841,8 @@
     "lon": 2.398868,
     "lines": [
       "11"
-    ]
+    ],
+    "arrondissement": 20
   },
   {
     "id": "st-270",
@@ -2506,7 +2851,8 @@
     "lon": 2.321258,
     "lines": [
       "10"
-    ]
+    ],
+    "arrondissement": 7
   },
   {
     "id": "st-271",
@@ -2515,7 +2861,8 @@
     "lon": 2.315057,
     "lines": [
       "13"
-    ]
+    ],
+    "arrondissement": 7
   },
   {
     "id": "st-272",
@@ -2524,7 +2871,8 @@
     "lon": 2.301108,
     "lines": [
       "12"
-    ]
+    ],
+    "arrondissement": 15
   },
   {
     "id": "st-273",
@@ -2533,7 +2881,8 @@
     "lon": 2.329009,
     "lines": [
       "4"
-    ]
+    ],
+    "arrondissement": 6
   },
   {
     "id": "st-274",
@@ -2542,7 +2891,8 @@
     "lon": 2.285335,
     "lines": [
       "2"
-    ]
+    ],
+    "arrondissement": 16
   },
   {
     "id": "st-275",
@@ -2552,7 +2902,8 @@
     "lines": [
       "2",
       "3"
-    ]
+    ],
+    "arrondissement": 8
   },
   {
     "id": "st-276",
@@ -2561,7 +2912,8 @@
     "lon": 2.307949,
     "lines": [
       "12"
-    ]
+    ],
+    "arrondissement": 15
   },
   {
     "id": "st-277",
@@ -2570,7 +2922,8 @@
     "lon": 2.380021,
     "lines": [
       "9"
-    ]
+    ],
+    "arrondissement": 11
   },
   {
     "id": "st-278",
@@ -2579,7 +2932,8 @@
     "lon": 2.304674,
     "lines": [
       "3"
-    ]
+    ],
+    "arrondissement": 17
   },
   {
     "id": "st-279",
@@ -2588,7 +2942,8 @@
     "lon": 2.306403,
     "lines": [
       "8"
-    ]
+    ],
+    "arrondissement": 7
   },
   {
     "id": "st-280",
@@ -2597,7 +2952,8 @@
     "lon": 2.269136,
     "lines": [
       "10"
-    ]
+    ],
+    "arrondissement": 16
   },
   {
     "id": "st-281",
@@ -2606,7 +2962,10 @@
     "lon": 2.412763,
     "lines": [
       "5"
-    ]
+    ],
+    "arrondissement": null,
+    "commune": "Pantin",
+    "code_insee": "93055"
   },
   {
     "id": "st-282",
@@ -2615,6 +2974,7 @@
     "lon": 2.349618,
     "lines": [
       "4"
-    ]
+    ],
+    "arrondissement": 2
   }
 ]

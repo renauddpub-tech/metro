@@ -27,7 +27,8 @@ const DATA_PATHS = {
 let STATIONS = [];
 let LINES = [];
 let LINES_BY_ID = {};
-let LINE_TRACES = {};   // { lineId: { color, segments: [[[lon,lat],...], ...] } }
+let LINE_TRACES = {};            // { lineId: { color, segments: [[[lon,lat],...], ...] } }
+let STATIONS_BY_LINE = {};       // { lineId: [stationObj, ...] }
 
 async function loadData() {
   const [stations, lines, traces] = await Promise.all([
@@ -39,6 +40,26 @@ async function loadData() {
   LINES = lines;
   LINES_BY_ID = Object.fromEntries(lines.map(l => [l.id, l]));
   LINE_TRACES = traces;
+
+  // Index inverse : pour chaque ligne, la liste des stations qui la desservent
+  STATIONS_BY_LINE = {};
+  for (const line of lines) STATIONS_BY_LINE[line.id] = [];
+  for (const st of stations) {
+    for (const lineId of st.lines) {
+      if (STATIONS_BY_LINE[lineId]) STATIONS_BY_LINE[lineId].push(st);
+    }
+  }
+}
+
+/** Renvoie le libellé géographique d'une station : 19e arr. ou Issy-les-Moulineaux. */
+function zoneLabel(station) {
+  if (station.arrondissement) {
+    const a = station.arrondissement;
+    const suffix = a === 1 ? 'er' : 'e';
+    return `Paris ${a}${suffix}`;
+  }
+  if (station.commune) return station.commune;
+  return '';
 }
 
 /* ============================================================
@@ -48,11 +69,14 @@ async function loadData() {
 const state = {
   session: null,
   map: null,
-  markerLayer: null,    // calques temporaires (highlight asso, révélations, zones)
-  pinsLayer: null,      // calque permanent : toutes les pastilles de stations
-  pinByStationId: {},   // index { stationId -> Leaflet marker } pour mutations rapides
-  hintZone: null,       // cercle Leaflet de la zone d'indice (mode LOCATE 2e tentative)
-  tracesLayer: null,    // calque éphémère pour les tracés de lignes révélés
+  markerLayer: null,        // calques temporaires (highlight asso, révélations, zones)
+  pinsLayer: null,          // calque permanent : toutes les pastilles de stations
+  pinByStationId: {},       // index { stationId -> Leaflet marker } pour mutations rapides
+  hintZone: null,           // cercle Leaflet de la zone d'indice (mode LOCATE 2e tentative)
+  tracesLayer: null,        // calque éphémère pour les tracés de lignes révélés
+  revealStationsLayer: null,// calque éphémère pour les stations des lignes révélées
+  lineSelection: new Set(), // chips sélectionnés en mode ASSOCIATE avant Valider
+  awaitingNext: false,      // true entre la révélation et le clic sur 'Question suivante'
   difficulty: 'normal',
 };
 
@@ -157,11 +181,10 @@ function initMap() {
     maxZoom: 19,
   }).addTo(state.map);
 
-  // ordre de z-index : tracés (en dessous) → pastilles → markers temp
+  // ordre de z-index : tracés (en dessous) → stations de ligne révélées → pastilles → markers temp
   state.tracesLayer = L.layerGroup().addTo(state.map);
-  // calque permanent : toutes les pastilles
+  state.revealStationsLayer = L.layerGroup().addTo(state.map);
   state.pinsLayer = L.layerGroup().addTo(state.map);
-  // calque temporaire : highlight, zone, révélation
   state.markerLayer = L.layerGroup().addTo(state.map);
 
   buildStationPins();
@@ -205,7 +228,11 @@ function setPinState(stationId, cssClass) {
 function clearMap() {
   if (state.markerLayer) state.markerLayer.clearLayers();
   if (state.tracesLayer) state.tracesLayer.clearLayers();
+  if (state.revealStationsLayer) state.revealStationsLayer.clearLayers();
   state.hintZone = null;
+  state.lineSelection.clear();
+  state.awaitingNext = false;
+  hideNextButton();
   // réaffiche toutes les pastilles (peuvent avoir été masquées par le mode ASSOCIATE)
   Object.values(state.pinByStationId).forEach(m => {
     const el = m.getElement()?.querySelector('.station-pin');
@@ -240,6 +267,43 @@ function drawStationLineTraces(station) {
   }
 }
 
+/**
+ * Affiche, par-dessus les tracés, toutes les stations de chaque ligne révélée.
+ * - La station révélée n'a pas de marqueur secondaire (sa pastille principale est déjà en valeur).
+ * - Chaque autre station de la ligne reçoit une petite pastille colorée (couleur de la ligne).
+ * - Pour une station multi-lignes, on superpose un anneau par ligne supplémentaire.
+ * - Les marqueurs sont non interactifs (display only).
+ */
+function drawStationsOfRevealedLines(centerStation) {
+  if (!state.revealStationsLayer) return;
+  // Regroupe : par stationId, les couleurs des lignes desservies concernées par la révélation
+  const colorsByStation = new Map();
+  for (const lineId of centerStation.lines) {
+    const color = LINES_BY_ID[lineId]?.color || '#888';
+    const stations = STATIONS_BY_LINE[lineId] || [];
+    for (const st of stations) {
+      if (st.id === centerStation.id) continue;
+      const arr = colorsByStation.get(st.id) || [];
+      arr.push(color);
+      colorsByStation.set(st.id, arr);
+    }
+  }
+  for (const [stationId, colors] of colorsByStation) {
+    const st = STATIONS.find(s => s.id === stationId);
+    if (!st) continue;
+    // primaire = première couleur, secondaire = anneau couleur 2 si multi-lignes
+    const primary = colors[0];
+    const secondary = colors[1];
+    const html = `<div class="line-station" style="background:${primary};${secondary ? `box-shadow:0 0 0 2px ${secondary}, 0 0 0 3px rgba(0,0,0,0.15);` : 'box-shadow:0 0 0 1.5px rgba(255,255,255,0.9), 0 0 0 2.5px rgba(0,0,0,0.12);'}" aria-hidden="true"></div>`;
+    const marker = L.marker([st.lat, st.lon], {
+      icon: L.divIcon({ className: '', html, iconSize: [10, 10], iconAnchor: [5, 5] }),
+      interactive: false,
+      keyboard: false,
+    });
+    state.revealStationsLayer.addLayer(marker);
+  }
+}
+
 /* ============================================================
    5. QUESTIONS
 ============================================================ */
@@ -247,6 +311,7 @@ function drawStationLineTraces(station) {
 function renderCurrentQuestion() {
   clearMap();
   $('#line-picker').hidden = true;
+  $('#validate-bar').hidden = true;
   hideFeedback();
 
   const q = state.session.questions[state.session.index];
@@ -258,32 +323,38 @@ function renderCurrentQuestion() {
 /* ----- A. LOCALISATION (cliquer sur la bonne pastille) ----- */
 function renderLocateQuestion(q) {
   $('#prompt-kind').textContent = 'Localisation';
-  $('#prompt-text').textContent = `Où se trouve ${q.station.name} ?`;
-  const linesLabel = q.station.lines.map(l => `Ligne ${l}`).join(' · ');
-  $('#prompt-hint').textContent = state.session.difficulty === 'easy'
-    ? `Indice : ${linesLabel}`
-    : 'Cliquez sur la bonne station.';
+  const zone = zoneLabel(q.station);
+  $('#prompt-text').textContent = zone
+    ? `Où se trouve ${q.station.name} (${zone}) ?`
+    : `Où se trouve ${q.station.name} ?`;
+  $('#prompt-hint').textContent = 'Cliquez sur la bonne station.';
   // Les ~282 pastilles sont déjà affichées en permanence par state.pinsLayer.
 }
 
 /** Clic sur une pastille (toutes les questions LOCATE passent par ici). */
 function onStationClick(stationId) {
   if (!state.session) return;
+  if (state.awaitingNext) return;
   const q = state.session.questions[state.session.index];
   if (q.kind !== QUESTION_KINDS.LOCATE) return;
-  // si on est déjà en feedback final, on ignore
-  if ($('#feedback').classList.contains('is-visible')
-      && state.session.attempt >= 2) return;
+  if (state.session.attempt >= 2) return;
 
   const result = evaluate(state.session, { stationId });
   handleLocateOutcome(result, stationId);
 }
 
-/* ----- B. ASSOCIATION (sélection de ligne) ----- */
+/* ----- B. ASSOCIATION (sélection multi-lignes + Valider) ----- */
 function renderAssociateQuestion(q) {
   $('#prompt-kind').textContent = 'Association';
-  $('#prompt-text').textContent = `Quelle ligne dessert ${q.station.name} ?`;
-  $('#prompt-hint').textContent = '';
+  const zone = zoneLabel(q.station);
+  const expected = q.station.lines.length;
+  const consigne = expected === 1
+    ? `Quelle ligne dessert ${q.station.name}${zone ? ` (${zone})` : ''} ?`
+    : `Quelles lignes desservent ${q.station.name}${zone ? ` (${zone})` : ''} ?`;
+  $('#prompt-text').textContent = consigne;
+  $('#prompt-hint').textContent = expected === 1
+    ? 'Sélectionnez une ligne puis validez.'
+    : `${expected} lignes à trouver. Cochez puis validez.`;
 
   // En mode association, on masque les pastilles voisines pour faire ressortir la cible
   Object.values(state.pinByStationId).forEach(m => {
@@ -305,6 +376,7 @@ function renderAssociateQuestion(q) {
   state.map.setView([q.station.lat, q.station.lon], 14, { animate: true });
 
   // line-picker
+  state.lineSelection.clear();
   const picker = $('#line-picker-inner');
   picker.innerHTML = '';
   for (const line of LINES) {
@@ -314,21 +386,53 @@ function renderAssociateQuestion(q) {
     chip.dataset.lineId = line.id;
     chip.textContent = line.id;
     chip.style.background = line.color;
+    chip.setAttribute('aria-pressed', 'false');
     if (isLightColor(line.color)) chip.classList.add('is-light');
     chip.addEventListener('click', () => onLineChipClick(line.id, chip));
     picker.appendChild(chip);
   }
   $('#line-picker').hidden = false;
+  $('#validate-bar').hidden = false;
+  updateValidateButton();
 }
 
 function onLineChipClick(lineId, chipEl) {
   if (!state.session) return;
+  if (state.awaitingNext) return;
   const q = state.session.questions[state.session.index];
   if (q.kind !== QUESTION_KINDS.ASSOCIATE) return;
-  if (state.session.attempt >= 2) return;
+  // toggle
+  if (state.lineSelection.has(lineId)) {
+    state.lineSelection.delete(lineId);
+    chipEl.classList.remove('is-picked');
+    chipEl.setAttribute('aria-pressed', 'false');
+  } else {
+    state.lineSelection.add(lineId);
+    chipEl.classList.add('is-picked');
+    chipEl.setAttribute('aria-pressed', 'true');
+  }
+  updateValidateButton();
+}
 
-  const result = evaluate(state.session, { lineId });
-  handleAssociateOutcome(result, chipEl);
+function updateValidateButton() {
+  const btn = $('#btn-validate');
+  const n = state.lineSelection.size;
+  btn.disabled = n === 0;
+  btn.textContent = n === 0
+    ? 'Validez votre sélection'
+    : n === 1 ? 'Valider (1 ligne)'
+              : `Valider (${n} lignes)`;
+}
+
+function onValidateAssociate() {
+  if (!state.session || state.awaitingNext) return;
+  const q = state.session.questions[state.session.index];
+  if (q.kind !== QUESTION_KINDS.ASSOCIATE) return;
+  if (state.lineSelection.size === 0) return;
+
+  const lineIds = [...state.lineSelection];
+  const result = evaluate(state.session, { lineIds });
+  handleAssociateOutcome(result, lineIds);
 }
 
 /* =============================================================
@@ -341,23 +445,21 @@ function handleLocateOutcome(result, clickedStationId) {
 
   if (result.outcome === 'correct') {
     setPinState(clickedStationId, 'is-correct');
-    // désactiver toutes les autres pastilles
     Object.values(state.pinByStationId).forEach(m => {
       const el = m.getElement()?.querySelector('.station-pin');
       if (el && !el.classList.contains('is-correct')) el.classList.add('is-disabled');
     });
-    drawStationLineTraces(q.station);
+    revealOnMap(q.station);
     showFeedback({
       title: result.attempt === 1 ? 'Bien vu.' : 'Trouvé.',
-      detail: feedbackDetailCorrect(q, result),
+      detail: revealDetail(q.station, result, 'correct'),
       kind: 'success',
     });
-    transitionToNext(1800);
+    awaitNext();
     return;
   }
 
   if (result.outcome === 'retry') {
-    // mauvaise pastille → rouge, on garde toutes les autres cliquables
     setPinState(clickedStationId, 'is-wrong');
     showFeedback({
       title: 'Pas la bonne.',
@@ -366,100 +468,101 @@ function handleLocateOutcome(result, clickedStationId) {
       ephemeral: true,
     });
     drawHintZone(q.station);
-    // on cache le feedback rapidement pour ne pas gêner le 2e clic
     setTimeout(() => hideFeedback(), 1500);
     return;
   }
 
-  // outcome 'fail' : 2e erreur consécutive → on révèle la bonne
+  // outcome 'fail' : 2e erreur → révélation
   setPinState(clickedStationId, 'is-wrong');
   setPinState(q.station.id, 'is-reveal');
-  // désactiver tout le reste
   Object.values(state.pinByStationId).forEach(m => {
     const el = m.getElement()?.querySelector('.station-pin');
     if (el && !el.classList.contains('is-wrong') && !el.classList.contains('is-reveal')) {
       el.classList.add('is-disabled');
     }
   });
-  drawStationLineTraces(q.station);
+  revealOnMap(q.station);
   showFeedback({
     title: 'Pas trouvé.',
-    detail: `${q.station.name} est ici. ${linesLabel(q.station)}.`,
+    detail: revealDetail(q.station, result, 'fail'),
     kind: 'error',
   });
-  transitionToNext(2800);
+  awaitNext();
 }
 
-/** Outcome ASSOCIATE : 2 tentatives sans indice (la station est déjà visible). */
-function handleAssociateOutcome(result, chipEl) {
+/** Outcome ASSOCIATE : multi-sélection, score net, une seule tentative. */
+function handleAssociateOutcome(result, pickedLineIds) {
   const q = state.session.questions[state.session.index];
+  const expected = new Set(q.station.lines);
+  const picked = new Set(pickedLineIds);
 
-  if (result.outcome === 'correct') {
-    // colorer le chip choisi en succès, désactiver tous les autres
-    document.querySelectorAll('.line-chip').forEach(c => {
-      c.disabled = true;
-      if (q.station.lines.includes(c.dataset.lineId)) c.classList.add('is-correct');
-    });
-    drawStationLineTraces(q.station);
-    showFeedback({
-      title: result.attempt === 1 ? 'Bonne ligne.' : 'Trouvé.',
-      detail: result.attempt === 1
-        ? `+${result.scoreDelta} pts. Série : ${state.session.streak}`
-        : `+${result.scoreDelta} pts (2e essai).`,
-      kind: 'success',
-    });
-    transitionToNext(1800);
-    return;
-  }
-
-  if (result.outcome === 'retry') {
-    chipEl.classList.add('is-wrong');
-    chipEl.disabled = true;
-    showFeedback({
-      title: 'Pas cette ligne.',
-      detail: 'Une seconde tentative.',
-      kind: 'error',
-      ephemeral: true,
-    });
-    setTimeout(() => hideFeedback(), 1200);
-    return;
-  }
-
-  // fail : on révèle toutes les bonnes lignes
-  chipEl.classList.add('is-wrong');
+  // marquage des chips : correct / wrong / missed
   document.querySelectorAll('.line-chip').forEach(c => {
     c.disabled = true;
-    if (q.station.lines.includes(c.dataset.lineId)) c.classList.add('is-correct');
+    const id = c.dataset.lineId;
+    if (expected.has(id) && picked.has(id)) c.classList.add('is-correct');
+    else if (!expected.has(id) && picked.has(id)) c.classList.add('is-wrong');
+    else if (expected.has(id) && !picked.has(id)) c.classList.add('is-missed');
   });
-  drawStationLineTraces(q.station);
+  // masquer la barre de validation pour laisser place au bouton 'Question suivante'
+  $('#validate-bar').hidden = true;
+
+  revealOnMap(q.station);
+
+  const isFull = result.outcome === 'correct';
+  const kind = isFull ? 'success' : (result.outcome === 'partial' ? 'warning' : 'error');
+  let title;
+  if (isFull) title = expected.size === 1 ? 'Bonne ligne.' : 'Toutes les lignes.';
+  else if (result.outcome === 'partial') title = 'Partiellement.';
+  else title = 'Pas la bonne ligne.';
+
   showFeedback({
-    title: 'Pas la bonne ligne.',
-    detail: `${q.station.name} est desservie par ${linesLabel(q.station)}.`,
-    kind: 'error',
+    title,
+    detail: revealDetail(q.station, result, result.outcome),
+    kind,
   });
-  transitionToNext(2800);
+  awaitNext();
 }
 
-/* ----- Helpers feedback ----- */
+/* ----- Helpers révélation + feedback ----- */
 
-function feedbackDetailCorrect(q, result) {
-  if (q.kind === QUESTION_KINDS.LOCATE) {
-    return result.attempt === 1
-      ? `${linesLabel(q.station)}. +${result.scoreDelta} pts`
-      : `${linesLabel(q.station)}. +${result.scoreDelta} pts (2e essai).`;
+/** Révélation visuelle complète : tracés + stations de toutes les lignes desservant la station. */
+function revealOnMap(station) {
+  drawStationLineTraces(station);
+  drawStationsOfRevealedLines(station);
+}
+
+/** Texte de détail pour le feedback selon le contexte de révélation. */
+function revealDetail(station, result, mode) {
+  const zone = zoneLabel(station);
+  const lines = linesLabel(station);
+  const zonePart = zone ? `${zone} · ` : '';
+
+  if (mode === 'correct') {
+    const streakPart = state.session.streak > 1 ? ` · Série : ${state.session.streak}` : '';
+    return `${zonePart}${lines}. +${result.scoreDelta} pts${streakPart}`;
   }
-  return result.attempt === 1
-    ? `+${result.scoreDelta} pts. Série : ${state.session.streak}`
-    : `+${result.scoreDelta} pts (2e essai).`;
+  if (mode === 'partial') {
+    const hits = result.hits?.length || 0;
+    const total = station.lines.length;
+    const misses = result.misses?.length || 0;
+    const missesPart = misses ? `, ${misses} erronée${misses>1?'s':''}` : '';
+    return `${zonePart}${lines}. ${hits}/${total} bonne${hits>1?'s':''}${missesPart}. +${result.scoreDelta} pts`;
+  }
+  // fail
+  return `${station.name} — ${zonePart}${lines}.`;
 }
 
 function linesLabel(station) {
   return station.lines.map(l => `Ligne ${l}`).join(' · ');
 }
 
-function showFeedback({ title, detail, kind, ephemeral = false }) {
+function showFeedback({ title, detail, kind }) {
   const fb = $('#feedback');
-  fb.className = 'feedback is-visible ' + (kind === 'success' ? 'is-success' : 'is-error');
+  const klass = kind === 'success' ? 'is-success'
+              : kind === 'warning' ? 'is-warning'
+              : 'is-error';
+  fb.className = 'feedback is-visible ' + klass;
   fb.innerHTML = `<p class="feedback-title">${title}</p><p class="feedback-detail">${detail}</p>`;
 }
 
@@ -480,14 +583,35 @@ function drawHintZone(station) {
   updateTopbar();
 }
 
-/** Transition vers la question suivante après un délai. */
-function transitionToNext(delayMs) {
+/** Après révélation : on affiche un bouton 'Question suivante' que l'utilisateur clique à son rythme. */
+function awaitNext() {
+  state.awaitingNext = true;
   updateTopbar();
-  setTimeout(() => {
-    const done = advance(state.session);
-    if (done) finishSession();
-    else renderCurrentQuestion();
-  }, delayMs);
+  showNextButton();
+}
+
+function onNextClick() {
+  if (!state.session) return;
+  state.awaitingNext = false;
+  hideNextButton();
+  const done = advance(state.session);
+  if (done) finishSession();
+  else renderCurrentQuestion();
+}
+
+function showNextButton() {
+  const btn = $('#btn-next');
+  if (!btn) return;
+  const isLast = state.session.index >= state.session.questions.length - 1;
+  btn.textContent = isLast ? 'Voir les résultats' : 'Question suivante';
+  btn.hidden = false;
+  // focus pour permettre Entrée
+  setTimeout(() => btn.focus(), 50);
+}
+
+function hideNextButton() {
+  const btn = $('#btn-next');
+  if (btn) btn.hidden = true;
 }
 
 /** Distance Haversine en mètres (dupliqué ici pour ne pas exposer l'utilitaire d'engine). */
@@ -580,6 +704,17 @@ function bindEvents() {
     Storage.reset();
     $('#pseudo').value = '';
     renderHome();
+  });
+
+  $('#btn-validate').addEventListener('click', onValidateAssociate);
+  $('#btn-next').addEventListener('click', onNextClick);
+
+  // Entrée = question suivante quand le bouton est visible
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && state.awaitingNext) {
+      e.preventDefault();
+      onNextClick();
+    }
   });
 }
 

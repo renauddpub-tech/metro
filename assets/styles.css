@@ -397,18 +397,21 @@ input { font: inherit; }
   to   { opacity: 1; }
 }
 
-/* --- Sélecteur de lignes --- */
+/* --- Sélecteur de lignes (centré en bas, laisse de la place à droite pour Valider/Next) --- */
 .line-picker {
   position: absolute;
-  bottom: 24px; left: 50%;
-  transform: translateX(-50%);
+  bottom: 24px;
+  left: 24px;
+  right: 250px;
   z-index: var(--z-overlay);
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   padding: 12px 16px;
   box-shadow: var(--shadow);
-  max-width: calc(100% - 40px);
+}
+@media (max-width: 720px) {
+  .line-picker { right: 24px; bottom: 24px; }
 }
 .line-picker-inner {
   display: flex;
@@ -432,24 +435,81 @@ input { font: inherit; }
   box-shadow: var(--shadow-sm);
   font-family: var(--font-display);
 }
-.line-chip:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.line-chip:hover:not(:disabled) { transform: translateY(-2px); box-shadow: var(--shadow); }
+.line-chip.is-picked  { outline: 3px solid var(--ink); outline-offset: 3px; transform: translateY(-2px); }
 .line-chip.is-correct { outline: 3px solid var(--success); outline-offset: 2px; }
 .line-chip.is-wrong   { outline: 3px solid var(--danger);  outline-offset: 2px; opacity: .55; }
+.line-chip.is-missed  { outline: 3px dashed var(--success); outline-offset: 2px; opacity: .75; }
 .line-chip:disabled   { cursor: not-allowed; }
 
 /* Contraste lisible pour les lignes claires (jaune, rose, etc.) */
 .line-chip.is-light { color: var(--ink); text-shadow: none; }
 
-/* --- Feedback --- */
+/* --- Barre de validation (mode association, fixée à droite, en bas) --- */
+.validate-bar {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  z-index: var(--z-overlay);
+}
+.validate-bar .btn-primary {
+  min-width: 200px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  font-size: 0.95rem;
+}
+.validate-bar .btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: var(--ink-soft);
+}
+
+/* --- Bouton 'Question suivante' (même emplacement, remplace Valider après révélation) --- */
+.next-bar {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  z-index: calc(var(--z-feedback) + 1);
+  pointer-events: none;
+}
+.btn-next {
+  pointer-events: auto;
+  min-width: 200px;
+  padding: 13px 24px;
+  border-radius: 999px;
+  font-size: 1rem;
+  box-shadow: var(--shadow-lg);
+  animation: nextPulse 1.6s ease-in-out infinite;
+}
+@media (max-width: 720px) {
+  .validate-bar, .next-bar { left: 50%; right: auto; transform: translateX(-50%); }
+  .validate-bar { bottom: 130px; }
+  .next-bar { bottom: 130px; }
+}
+@keyframes nextPulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.03); }
+}
+
+/* --- Pastilles des stations d'une ligne révélée --- */
+.line-station {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 0.92;
+}
+
+/* --- Feedback (encart blanc, sous le prompt) --- */
 .feedback {
   position: absolute;
-  top: 50%;
+  top: 130px;
   left: 50%;
-  transform: translate(-50%, -50%) scale(.92);
+  transform: translateX(-50%) translateY(-6px) scale(.96);
   z-index: var(--z-feedback);
   background: var(--white);
   border-radius: var(--radius-lg);
-  padding: 22px 30px;
+  padding: 16px 26px;
   box-shadow: var(--shadow-lg);
   opacity: 0;
   pointer-events: none;
@@ -459,10 +519,11 @@ input { font: inherit; }
 }
 .feedback.is-visible {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translateX(-50%) translateY(0) scale(1);
 }
 .feedback.is-success { border-left: 4px solid var(--success); }
 .feedback.is-error   { border-left: 4px solid var(--danger); }
+.feedback.is-warning { border-left: 4px solid #C9542A; }
 .feedback-title {
   font-family: var(--font-display);
   font-size: 1.3rem;

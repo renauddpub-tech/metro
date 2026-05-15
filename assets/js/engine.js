@@ -96,60 +96,100 @@ export function buildSession({ stations, lines, difficulty = 'normal' }) {
 
 /**
  * Évalue la réponse à la question courante.
- * - payload pour LOCATE     : { stationId } cliqué
- * - payload pour ASSOCIATE  : { lineId }
+ * - payload LOCATE     : { stationId } cliqué
+ * - payload ASSOCIATE  : { lineIds: ["2","5",...] } sélection multiple
  *
  * Logique des tentatives :
- *  - 1ère tentative correcte  → score plein
- *  - 1ère tentative fausse    → on passe en "2e tentative" (indice de zone côté UI),
- *                                la fonction renvoie outcome='retry' et n'avance pas.
- *  - 2e tentative correcte    → score réduit (50 %)
- *  - 2e tentative fausse      → outcome='fail', on passe à la suivante.
+ *  LOCATE :
+ *   - 1ère tentative correcte  → score plein
+ *   - 1ère tentative fausse    → outcome='retry', indice de zone côté UI
+ *   - 2e tentative correcte    → score réduit (50 %)
+ *   - 2e tentative fausse      → outcome='fail'
  *
- * Retourne {
- *   outcome: 'correct'|'retry'|'fail',
- *   isCorrect: boolean (idem que outcome === 'correct'),
- *   correctStationId, correctLines, scoreDelta, question, attempt
- * }
+ *  ASSOCIATE (multi-sélection avec tolérance d'erreur) :
+ *   - score = scoreBase × (bonnes − mauvaises) / total_attendu
+ *   - plancher 0, plafond scoreBase (+ streak si parfait)
+ *   - une seule tentative (pas de retry)
+ *   - 'correct' si toutes bonnes et aucune mauvaise ; 'partial' sinon (compte comme non-correct)
+ *
+ * Retourne :
+ *   { outcome, isCorrect, correctStationId, correctLines, scoreDelta,
+ *     question, attempt, picked, hits, misses, missed }
  */
 export function evaluate(session, payload) {
   const q = session.questions[session.index];
   const st = q.station;
   session.attempt = (session.attempt || 0) + 1;
 
-  let isCorrect = false;
-  if (q.kind === QUESTION_KINDS.LOCATE) {
-    isCorrect = payload.stationId === st.id;
-  } else {
-    isCorrect = st.lines.includes(payload.lineId);
-  }
-
   let outcome;
   let scoreDelta = 0;
+  let isCorrect = false;
+  let extra = {};
 
-  if (isCorrect) {
-    outcome = 'correct';
-    const streakBonus = 1 + Math.min(session.streak, 5) * 0.1;
-    // 2e tentative : score divisé par 2 et série non incrémentée
-    if (session.attempt === 1) {
+  if (q.kind === QUESTION_KINDS.LOCATE) {
+    isCorrect = payload.stationId === st.id;
+
+    if (isCorrect) {
+      outcome = 'correct';
+      const streakBonus = 1 + Math.min(session.streak, 5) * 0.1;
+      if (session.attempt === 1) {
+        scoreDelta = Math.round(session.cfg.scoreBase * streakBonus);
+        session.streak += 1;
+        session.bestStreak = Math.max(session.bestStreak, session.streak);
+      } else {
+        scoreDelta = Math.round(session.cfg.scoreBase * 0.5);
+        session.streak = 0;
+      }
+      session.score += scoreDelta;
+      session.correctCount += 1;
+      Storage.recordAnswer(st.id, true);
+    } else if (session.attempt === 1) {
+      outcome = 'retry';
+      session.streak = 0;
+    } else {
+      outcome = 'fail';
+      session.wrongStationIds.add(st.id);
+      Storage.recordAnswer(st.id, false);
+    }
+  } else {
+    // ASSOCIATE multi-sélection
+    const picked = Array.isArray(payload.lineIds) ? payload.lineIds : [];
+    const expected = new Set(st.lines);
+    const pickedSet = new Set(picked);
+    const hits = picked.filter(l => expected.has(l));
+    const misses = picked.filter(l => !expected.has(l));
+    const missed = st.lines.filter(l => !pickedSet.has(l));
+
+    extra = { picked, hits, misses, missed };
+
+    const total = st.lines.length;
+    // ratio net = (bonnes − mauvaises) / total_attendu, clamp [0, 1]
+    const ratio = Math.max(0, (hits.length - misses.length) / total);
+
+    isCorrect = hits.length === total && misses.length === 0;
+
+    if (isCorrect) {
+      outcome = 'correct';
+      const streakBonus = 1 + Math.min(session.streak, 5) * 0.1;
       scoreDelta = Math.round(session.cfg.scoreBase * streakBonus);
       session.streak += 1;
       session.bestStreak = Math.max(session.bestStreak, session.streak);
-    } else {
-      scoreDelta = Math.round(session.cfg.scoreBase * 0.5);
+      session.score += scoreDelta;
+      session.correctCount += 1;
+      Storage.recordAnswer(st.id, true);
+    } else if (ratio > 0) {
+      outcome = 'partial';
+      scoreDelta = Math.round(session.cfg.scoreBase * ratio);
+      session.score += scoreDelta;
       session.streak = 0;
+      session.wrongStationIds.add(st.id);
+      Storage.recordAnswer(st.id, false);
+    } else {
+      outcome = 'fail';
+      session.streak = 0;
+      session.wrongStationIds.add(st.id);
+      Storage.recordAnswer(st.id, false);
     }
-    session.score += scoreDelta;
-    session.correctCount += 1;
-    Storage.recordAnswer(st.id, true);
-  } else if (session.attempt === 1) {
-    // Une seconde chance avec indice de zone
-    outcome = 'retry';
-    session.streak = 0;
-  } else {
-    outcome = 'fail';
-    session.wrongStationIds.add(st.id);
-    Storage.recordAnswer(st.id, false);
   }
 
   return {
@@ -160,6 +200,7 @@ export function evaluate(session, payload) {
     scoreDelta,
     question: q,
     attempt: session.attempt,
+    ...extra,
   };
 }
 
