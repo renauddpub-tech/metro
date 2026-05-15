@@ -500,6 +500,62 @@ input { font: inherit; }
   opacity: 0.92;
 }
 
+/* --- Tooltip Leaflet : nom de station au survol (sobre, discret) --- */
+.leaflet-tooltip.station-tooltip {
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.2;
+  box-shadow: 0 2px 6px rgba(27,29,36,.10);
+  white-space: nowrap;
+  pointer-events: none;
+}
+.leaflet-tooltip.station-tooltip::before { display: none; } /* pas de flèche */
+
+/* --- Label permanent : voisines de la station cible --- */
+/* Important : ne pas appliquer de transform ici, Leaflet utilise transform pour positionner le tooltip. */
+.leaflet-tooltip.station-label {
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 2px 7px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0.005em;
+  box-shadow: 0 1px 3px rgba(27,29,36,.08);
+  white-space: nowrap;
+  pointer-events: none;
+  animation: label-fade-in-opacity .35s ease-out both;
+}
+.leaflet-tooltip.station-label::before { display: none; }
+
+/* --- Label de la station cible : mis en valeur --- */
+.leaflet-tooltip.station-label.is-target {
+  background: var(--ink);
+  color: var(--paper-2);
+  border: none;
+  border-radius: 8px;
+  padding: 5px 12px;
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  box-shadow: 0 4px 14px rgba(27,29,36,.25), 0 0 0 3px rgba(201,84,42,.18);
+}
+
+@keyframes label-fade-in-opacity {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 /* --- Feedback (encart blanc, sous le prompt) --- */
 .feedback {
   position: absolute;

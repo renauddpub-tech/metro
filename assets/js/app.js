@@ -268,15 +268,30 @@ function drawStationLineTraces(station) {
 }
 
 /**
- * Affiche, par-dessus les tracés, toutes les stations de chaque ligne révélée.
- * - La station révélée n'a pas de marqueur secondaire (sa pastille principale est déjà en valeur).
- * - Chaque autre station de la ligne reçoit une petite pastille colorée (couleur de la ligne).
- * - Pour une station multi-lignes, on superpose un anneau par ligne supplémentaire.
- * - Les marqueurs sont non interactifs (display only).
+ * Affiche, par-dessus les tracés, toutes les stations de chaque ligne révélée :
+ *  - une petite pastille colorée par station,
+ *  - un tooltip Leaflet avec le nom (visible au survol),
+ *  - un label permanent pour la station cible et ses voisines immédiates
+ *    (2 plus proches sur chaque ligne révélée).
  */
 function drawStationsOfRevealedLines(centerStation) {
   if (!state.revealStationsLayer) return;
-  // Regroupe : par stationId, les couleurs des lignes desservies concernées par la révélation
+
+  // 1. Pour chaque ligne révélée, identifier les 2 voisines géographiques les plus proches
+  const neighborIds = new Set();
+  for (const lineId of centerStation.lines) {
+    const stations = (STATIONS_BY_LINE[lineId] || [])
+      .filter(s => s.id !== centerStation.id)
+      .map(s => ({
+        s,
+        d: haversine(s.lat, s.lon, centerStation.lat, centerStation.lon),
+      }))
+      .sort((a, b) => a.d - b.d)
+      .slice(0, 2);
+    for (const { s } of stations) neighborIds.add(s.id);
+  }
+
+  // 2. Regrouper, par stationId, les couleurs des lignes desservies (concernées par la révélation)
   const colorsByStation = new Map();
   for (const lineId of centerStation.lines) {
     const color = LINES_BY_ID[lineId]?.color || '#888';
@@ -288,20 +303,58 @@ function drawStationsOfRevealedLines(centerStation) {
       colorsByStation.set(st.id, arr);
     }
   }
+
+  // 3. Créer pastilles + tooltip pour toutes ; label permanent pour les voisines
   for (const [stationId, colors] of colorsByStation) {
     const st = STATIONS.find(s => s.id === stationId);
     if (!st) continue;
-    // primaire = première couleur, secondaire = anneau couleur 2 si multi-lignes
+    const isNeighbor = neighborIds.has(st.id);
     const primary = colors[0];
     const secondary = colors[1];
-    const html = `<div class="line-station" style="background:${primary};${secondary ? `box-shadow:0 0 0 2px ${secondary}, 0 0 0 3px rgba(0,0,0,0.15);` : 'box-shadow:0 0 0 1.5px rgba(255,255,255,0.9), 0 0 0 2.5px rgba(0,0,0,0.12);'}" aria-hidden="true"></div>`;
+    const html = `<div class="line-station" style="background:${primary};${
+      secondary
+        ? `box-shadow:0 0 0 2px ${secondary}, 0 0 0 3px rgba(0,0,0,0.15);`
+        : 'box-shadow:0 0 0 1.5px rgba(255,255,255,0.9), 0 0 0 2.5px rgba(0,0,0,0.12);'
+    }" aria-hidden="true"></div>`;
     const marker = L.marker([st.lat, st.lon], {
       icon: L.divIcon({ className: '', html, iconSize: [10, 10], iconAnchor: [5, 5] }),
-      interactive: false,
+      interactive: true,    // pour permettre le hover/tooltip
       keyboard: false,
+      riseOnHover: true,
     });
+    // Un seul tooltip par marqueur (Leaflet n'en accepte qu'un) :
+    //  - voisines : label permanent toujours visible
+    //  - autres   : tooltip au survol uniquement
+    if (isNeighbor) {
+      marker.bindTooltip(st.name, {
+        permanent: true,
+        direction: 'top',
+        offset: [0, -6],
+        className: 'station-label',
+      });
+    } else {
+      marker.bindTooltip(st.name, {
+        direction: 'top',
+        offset: [0, -6],
+        className: 'station-tooltip',
+        sticky: false,
+      });
+    }
     state.revealStationsLayer.addLayer(marker);
   }
+
+  // 4. Label permanent pour la station cible (mis en valeur)
+  //    Tooltip Leaflet détaché, positionné exactement sur la station cible.
+  const targetTooltip = L.tooltip({
+    permanent: true,
+    direction: 'top',
+    offset: [0, -14],
+    className: 'station-label is-target',
+    interactive: false,
+  })
+    .setContent(centerStation.name)
+    .setLatLng([centerStation.lat, centerStation.lon]);
+  state.revealStationsLayer.addLayer(targetTooltip);
 }
 
 /* ============================================================
@@ -530,6 +583,14 @@ function handleAssociateOutcome(result, pickedLineIds) {
 function revealOnMap(station) {
   drawStationLineTraces(station);
   drawStationsOfRevealedLines(station);
+  // Recentrer doucement sur la station si elle est hors du cadre actuel
+  // (utile en LOCATE : on a cliqué loin, le label de la cible serait coupé)
+  if (state.map) {
+    const bounds = state.map.getBounds().pad(-0.18); // marge intérieure ~18%
+    if (!bounds.contains([station.lat, station.lon])) {
+      state.map.panTo([station.lat, station.lon], { animate: true, duration: 0.6 });
+    }
+  }
 }
 
 /** Texte de détail pour le feedback selon le contexte de révélation. */
