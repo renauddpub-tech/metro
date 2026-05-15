@@ -19,22 +19,26 @@ import {
 ============================================================ */
 
 const DATA_PATHS = {
-  stations: 'data/stations.json',
-  lines: 'data/lines.json',
+  stations:   'data/stations.json',
+  lines:      'data/lines.json',
+  lineTraces: 'data/line-traces.json',
 };
 
 let STATIONS = [];
 let LINES = [];
 let LINES_BY_ID = {};
+let LINE_TRACES = {};   // { lineId: { color, segments: [[[lon,lat],...], ...] } }
 
 async function loadData() {
-  const [stations, lines] = await Promise.all([
+  const [stations, lines, traces] = await Promise.all([
     fetch(DATA_PATHS.stations).then(r => r.json()),
     fetch(DATA_PATHS.lines).then(r => r.json()),
+    fetch(DATA_PATHS.lineTraces).then(r => r.json()),
   ]);
   STATIONS = stations;
   LINES = lines;
   LINES_BY_ID = Object.fromEntries(lines.map(l => [l.id, l]));
+  LINE_TRACES = traces;
 }
 
 /* ============================================================
@@ -48,6 +52,7 @@ const state = {
   pinsLayer: null,      // calque permanent : toutes les pastilles de stations
   pinByStationId: {},   // index { stationId -> Leaflet marker } pour mutations rapides
   hintZone: null,       // cercle Leaflet de la zone d'indice (mode LOCATE 2e tentative)
+  tracesLayer: null,    // calque éphémère pour les tracés de lignes révélés
   difficulty: 'normal',
 };
 
@@ -152,6 +157,8 @@ function initMap() {
     maxZoom: 19,
   }).addTo(state.map);
 
+  // ordre de z-index : tracés (en dessous) → pastilles → markers temp
+  state.tracesLayer = L.layerGroup().addTo(state.map);
   // calque permanent : toutes les pastilles
   state.pinsLayer = L.layerGroup().addTo(state.map);
   // calque temporaire : highlight, zone, révélation
@@ -197,6 +204,7 @@ function setPinState(stationId, cssClass) {
 
 function clearMap() {
   if (state.markerLayer) state.markerLayer.clearLayers();
+  if (state.tracesLayer) state.tracesLayer.clearLayers();
   state.hintZone = null;
   // réaffiche toutes les pastilles (peuvent avoir été masquées par le mode ASSOCIATE)
   Object.values(state.pinByStationId).forEach(m => {
@@ -204,6 +212,32 @@ function clearMap() {
     if (el) el.style.display = '';
   });
   resetStationPins();
+}
+
+/**
+ * Trace en couleur sur la carte toutes les lignes desservant la station fournie.
+ * Appelé au moment de la révélation (succès en LOCATE, succès/fail en ASSOCIATE,
+ * fail en LOCATE). Le calque est effacé au passage à la question suivante.
+ */
+function drawStationLineTraces(station) {
+  if (!state.tracesLayer) return;
+  for (const lineId of station.lines) {
+    const trace = LINE_TRACES[lineId];
+    if (!trace) continue;
+    // segments = MultiLineString : array de LineStrings
+    // Leaflet veut [[lat,lon], ...] alors que GeoJSON donne [lon,lat]
+    const latlngs = trace.segments.map(seg => seg.map(([lon, lat]) => [lat, lon]));
+    const poly = L.polyline(latlngs, {
+      color: trace.color,
+      weight: 4.5,
+      opacity: 0.85,
+      lineCap: 'round',
+      lineJoin: 'round',
+      className: 'line-trace',
+      interactive: false,
+    });
+    state.tracesLayer.addLayer(poly);
+  }
 }
 
 /* ============================================================
@@ -312,12 +346,13 @@ function handleLocateOutcome(result, clickedStationId) {
       const el = m.getElement()?.querySelector('.station-pin');
       if (el && !el.classList.contains('is-correct')) el.classList.add('is-disabled');
     });
+    drawStationLineTraces(q.station);
     showFeedback({
       title: result.attempt === 1 ? 'Bien vu.' : 'Trouvé.',
       detail: feedbackDetailCorrect(q, result),
       kind: 'success',
     });
-    transitionToNext(1200);
+    transitionToNext(1800);
     return;
   }
 
@@ -346,12 +381,13 @@ function handleLocateOutcome(result, clickedStationId) {
       el.classList.add('is-disabled');
     }
   });
+  drawStationLineTraces(q.station);
   showFeedback({
     title: 'Pas trouvé.',
     detail: `${q.station.name} est ici. ${linesLabel(q.station)}.`,
     kind: 'error',
   });
-  transitionToNext(2200);
+  transitionToNext(2800);
 }
 
 /** Outcome ASSOCIATE : 2 tentatives sans indice (la station est déjà visible). */
@@ -364,6 +400,7 @@ function handleAssociateOutcome(result, chipEl) {
       c.disabled = true;
       if (q.station.lines.includes(c.dataset.lineId)) c.classList.add('is-correct');
     });
+    drawStationLineTraces(q.station);
     showFeedback({
       title: result.attempt === 1 ? 'Bonne ligne.' : 'Trouvé.',
       detail: result.attempt === 1
@@ -371,7 +408,7 @@ function handleAssociateOutcome(result, chipEl) {
         : `+${result.scoreDelta} pts (2e essai).`,
       kind: 'success',
     });
-    transitionToNext(1200);
+    transitionToNext(1800);
     return;
   }
 
@@ -394,12 +431,13 @@ function handleAssociateOutcome(result, chipEl) {
     c.disabled = true;
     if (q.station.lines.includes(c.dataset.lineId)) c.classList.add('is-correct');
   });
+  drawStationLineTraces(q.station);
   showFeedback({
     title: 'Pas la bonne ligne.',
     detail: `${q.station.name} est desservie par ${linesLabel(q.station)}.`,
     kind: 'error',
   });
-  transitionToNext(2200);
+  transitionToNext(2800);
 }
 
 /* ----- Helpers feedback ----- */
